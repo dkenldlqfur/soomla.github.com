@@ -28,18 +28,13 @@
 </script>
   <script type="text/javascript">
       $(function(){
-          // Check the initial Poistion of the Sticky Header
-//          var stickyHeaderTop = $('.oss-bar').offset().top;
           $(window).scroll(function(){
               if( $(window).scrollTop() > 55 ) {
                   $('.oss-bar').css("transform","translateX(300px)");
-                  $('.facebook').css("transform","translateX(-230px)");
-                  //$('#sticky').css({position: 'fixed', top: '0px', float: 'right'});
-//                  $('.oss-bar').css("right", "50px");
+//                  $('.facebook').css("transform","translateX(-" + ($(".wrapper").width()/3.79) + "px)");
               } else {
                   $('.oss-bar').css("transform","translateX(0px)");
-                  $('.facebook').css("transform","translateX(0px)");
-//                  $('.oss-bar').css("right", "300px");
+//                  $('.facebook').css("transform","translateX(0px)");
               }
           });
       });
@@ -138,11 +133,13 @@
 <h1>Welcome to The SOOMLA Project</h1>
 
 
-<p>The SOOMLA Project is a series of open source initiatives with a joint goal to help mobile game developers get better stores and more in-app purchases. We are openly coding the following initiatives:
+<p>The SOOMLA Project is an open source framework for virtual economies in mobile games. Our goal is to help mobile game developers easier implementation of virtual currencies, virtual goods and in-app purchases. The framework includes:
     <ul>
-        <li>Platform specific projects that provide developers with a complete in-app purchasing stack and includes: storage of virtual items, purchasing sequences with the various marketplaces and a sample app for reference.</li>
-        <li>Customizable templates and themes which allows developers to leverage our work and quickly set up the store front based on pre-optimized and user intuitive layouts.</li>
-        <li>A Server side project that builds on top of the two other projects and boosts in-app commerce with analytics, dynamic storefronts, user management, optimization algorithms and much more.</li>
+        <li>Data model and storage convention for virtual goods, virtual currencies and common game economy mechanics.</li>
+        <li>Plugins for leading game development platforms such as Cocos2d and Unity as well as support for Native iOS and Android code.</li>
+        <li>APIs for simplifying In-App Purchases to a single line of code including increased security and event handling.</li>
+        <li>Templates and themes for virtual economies and store-front based on pre-optimized and user intuitive layouts.</li>
+        <li>Admin console for dynamically updating and optimizing virtual economy attributes and game economy mechanics.</li>
     </ul>
 </p>
 
