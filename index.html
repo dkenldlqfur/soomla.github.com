@@ -33,10 +33,12 @@
           $(window).scroll(function(){
               if( $(window).scrollTop() > 55 ) {
                   $('.oss-bar').css("transform","translateX(300px)");
+                  $('.facebook').css("transform","translateX(-230px)");
                   //$('#sticky').css({position: 'fixed', top: '0px', float: 'right'});
 //                  $('.oss-bar').css("right", "50px");
               } else {
                   $('.oss-bar').css("transform","translateX(0px)");
+                  $('.facebook').css("transform","translateX(0px)");
 //                  $('.oss-bar').css("right", "300px");
               }
           });
@@ -58,10 +60,10 @@
 
     <div class="wrapper">
 <header>
-        
-		<p>&nbsp;</p>
+
+
 		<h1>DOWNLOAD ZONE</h1>
-		
+
 		<h2><img src="img/black_android_logo.png" style="margin-top:12px" height="40px" /> ANDROID</h2>
         <strong>In-App Billing with a single line of code</strong>
 <!-- <iframe src="http://ghbtns.com/github-btn.html?user=soomla&repo=android-store&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="142px" height="30px"></iframe> 
@@ -108,18 +110,22 @@
     
 
 </header>
+
+<div class="facebook">
+    <fb:like href="https://www.facebook.com/The.SOOMLA.Project" layout="box_count" width="250"
+             show_faces="false" font="tahoma" class="fb_edge_widget_with_comment fb_iframe_widget"><span
+            style="height: 86px; width: 50px; "><iframe id="f3420ba1f4" name="f6a0a55a4" scrolling="no"
+                                                        style="border: none; overflow: hidden; height: 86px; width: 50px; "
+                                                        title="Like this content on Facebook."
+                                                        class="fb_ltr"
+                                                        src="http://www.facebook.com/plugins/like.php?api_key=409611972431183&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D11%23cb%3Df9cf5afb4%26origin%3Dhttp%253A%252F%252Fproject.soom.la%252Ff1837af578%26domain%3Dproject.soom.la%26relation%3Dparent.parent&amp;extended_social_context=false&amp;font=tahoma&amp;href=https%3A%2F%2Fwww.facebook.com%2FThe.SOOMLA.Project&amp;layout=box_count&amp;locale=en_US&amp;node_type=link&amp;sdk=joey&amp;show_faces=false&amp;width=250"></iframe></span>
+    </fb:like>
+</div>
+
 <div class="oss-bar">
-    
-                    
+
+
     <ul>
-		<li><fb:like href="https://www.facebook.com/The.SOOMLA.Project" layout="box_count" width="250"
-                             show_faces="false" font="tahoma" class="fb_edge_widget_with_comment fb_iframe_widget"><span
-                            style="height: 86px; width: 50px; "><iframe id="f3420ba1f4" name="f6a0a55a4" scrolling="no"
-                                                                        style="border: none; overflow: hidden; height: 86px; width: 50px; "
-                                                                        title="Like this content on Facebook."
-                                                                        class="fb_ltr"
-                                                                        src="http://www.facebook.com/plugins/like.php?api_key=409611972431183&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D11%23cb%3Df9cf5afb4%26origin%3Dhttp%253A%252F%252Fproject.soom.la%252Ff1837af578%26domain%3Dproject.soom.la%26relation%3Dparent.parent&amp;extended_social_context=false&amp;font=tahoma&amp;href=https%3A%2F%2Fwww.facebook.com%2FThe.SOOMLA.Project&amp;layout=box_count&amp;locale=en_US&amp;node_type=link&amp;sdk=joey&amp;show_faces=false&amp;width=250"></iframe></span>
-                    </fb:like></li>
 		<li><a class="ios" href="#ios_anchor">ios<br/><img src="img/apple-logo.png" style="margin-top:12px" height="40px" /></a></li>
         <li><a class="android" href="#android_anchor">android<br/><img src="img/black_android_logo.png" style="margin-top:12px" height="40px" /></a></li>
         <li><a class="cocos2dx" href="#cocos_anchor">cocos2d-x<br/><div style="position:relative;"><img src="img/coming-soon.png" width="35px" style="position: absolute; left: 0;" /><img src="img/cocos.png" style="margin-top:12px" height="40px" /></div></a></li>
@@ -127,10 +133,13 @@
     </ul>
 </div>
 <section>
+
 <a href="https://github.com/soomla/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-        <p><img src="https://dl.dropbox.com/u/88676957/SoomlaLogo_BlueLogo.png" alt="SOOMLA LOGO"></p>
+        <p><img src="https://dl.dropbox.com/u/88676957/SoomlaLogo_BlueLogo.png" alt="SOOMLA LOGO">
+            </p>
 
 <h1>Welcome to The SOOMLA Project</h1>
+
 
 <p>The SOOMLA Project is a series of open source initiatives with a joint goal to help mobile game developers get better stores and more in-app purchases. We are openly coding the following initiatives:
     <ul>
@@ -142,7 +151,7 @@
 
 <h1>Projects we Already Opened</h1>
 <ul>
-        <li><strong>ios-store</strong> - In App Purchasing Library for iOS </li> 
+        <li><strong>ios-store</strong> - In App Purchasing Library for iOS </li>
 
 		<li><strong>android-store</strong> - In App Billing Library for Android</li>
 </ul>
@@ -150,8 +159,8 @@
 
     <a name="ios_anchor"></a>
 <h1>ios-store &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<iframe src="http://ghbtns.com/github-btn.html?user=soomla&repo=ios-store&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe> 
-<iframe src="http://ghbtns.com/github-btn.html?user=soomla&repo=ios-store&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe> 
+<iframe src="http://ghbtns.com/github-btn.html?user=soomla&repo=ios-store&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
+<iframe src="http://ghbtns.com/github-btn.html?user=soomla&repo=ios-store&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
 
 </h1>   
 
