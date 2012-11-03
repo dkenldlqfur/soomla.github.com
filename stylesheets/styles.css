@@ -293,7 +293,9 @@ footer {
     list-style: none;
     float: left;
     line-height: 0;
-    margin: 0;
+}
+.oss-bar ul li img{
+    margin-top:10px;
 }
 .oss-bar ul li a {
     -moz-box-sizing:    border-box;
