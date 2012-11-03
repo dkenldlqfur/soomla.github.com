@@ -1,54 +1,58 @@
 <!doctype html>
 <html xmlns:fb="http://ogp.me/ns/fb#">
-    <head>
-        <link rel="shortcut icon" href="http://i49.tinypic.com/dpk4ue.png">
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="chrome=1">
-        <title>The Soomla Project</title>
+<head>
+    <link rel="shortcut icon" href="http://i49.tinypic.com/dpk4ue.png">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>The Soomla Project</title>
 
-        <link rel="stylesheet" href="stylesheets/styles.css">
-        <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
 
-        <script type="text/javascript">
+    <script type="text/javascript">
 
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-33649002-2']);
-            _gaq.push(['_trackPageview']);
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-33649002-2']);
+        _gaq.push(['_trackPageview']);
 
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
 
-        </script>
+    </script>
 
-        <script type="text/javascript">
-            $(function(){
-                $(window).scroll(function(){
-                    if( $(window).scrollTop() > 55 ) {
-                        $('.oss-bar').css("transform","translateX(300px)");
+    <script type="text/javascript">
+        $(function () {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 55) {
+                    $('.oss-bar').css("transform", "translateX(300px)");
                     //                  $('.facebook').css("transform","translateX(-" + ($(".wrapper").width()/3.79) + "px)");
-                    } else {
-                        $('.oss-bar').css("transform","translateX(0px)");
+                } else {
+                    $('.oss-bar').css("transform", "translateX(0px)");
                     //                  $('.facebook').css("transform","translateX(0px)");
-                    }
-                });
+                }
             });
-        </script>
-  </head>
-  <body>
+        });
+    </script>
+</head>
+<body>
 
 <div id="fb-root"></div>
 <script>
-    (function(d, s, id) {
+    (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
+        js = d.createElement(s);
+        js.id = id;
         js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=409611972431183";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
@@ -56,295 +60,435 @@
 
 
 <div class="wrapper">
+    <div class="facebook">
+        <fb:like href="https://www.facebook.com/The.SOOMLA.Project" send="false" layout="box_count" width="50"
+                 show_faces="false"></fb:like>
+    </div>
+
+    <div class="oss-bar">
+        <ul>
+            <li><a class="android" href="#android_anchor">android<br/><img src="img/black_android_logo.png"
+                                                                           style="margin-top:14px" height="40px"/></a></li>
+            <li><a class="ios" href="#ios_anchor">ios<br/><img src="img/apple-logo.png" style="margin-top:14px"
+                                                               height="40px"/></a></li>
+            <li><a class="cocos2dx" href="#cocos_anchor">cocos2d-x<br/><img src="img/cocos.png" style="margin-top:14px"
+                                                                            height="40px"/></a></li>
+            <li><a class="unity" href="#unity_anchor">unity 3D<br/>
+
+                <div style="position:relative;"><img src="img/coming-soon.png" width="35px"
+                                                     style="position: absolute; left: 0;"/><img src="img/unity.png"
+                                                                                                style="margin-top:14px"
+                                                                                                height="40px"/></div>
+            </a></li>
+        </ul>
+    </div>
+
     <header>
-		<h2><img src="img/black_android_logo.png" style="margin-top:12px" height="40px" /> ANDROID</h2>
+        <h2><img src="img/black_android_logo.png" style="margin-top:12px" height="40px"/> ANDROID</h2>
         <strong>In-App Billing with a single line of code</strong>
         <ul class="actions">
-            <li><a href="https://github.com/soomla/android-store/zipball/master" onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'android_code_download', 'Someone wants our ZIP !']);">Download <strong>ZIP File</strong></a></li>
-            <li><a href="https://github.com/soomla/android-store/tarball/master" onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'android_code_download', 'Someone wants our TAR !']);">Download <strong>TAR Ball</strong></a></li>
-            <li><a href="https://github.com/soomla/android-store" onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'android_project_view', 'Someone wants to view our project !']);">View On <strong>GitHub</strong></a></li>
+            <li><a href="https://github.com/soomla/android-store/zipball/master"
+                   onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'android_code_download', 'Someone wants our ZIP !']);">Download
+                <strong>ZIP File</strong></a></li>
+            <li><a href="https://github.com/soomla/android-store/tarball/master"
+                   onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'android_code_download', 'Someone wants our TAR !']);">Download
+                <strong>TAR Ball</strong></a></li>
+            <li><a href="https://github.com/soomla/android-store"
+                   onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'android_project_view', 'Someone wants to view our project !']);">View
+                On <strong>GitHub</strong></a></li>
         </ul>
 
-		<h2><img src="img/apple-logo.png" style="margin-top:12px" height="40px" /> iOS</h2>
+        <h2><img src="img/apple-logo.png" style="margin-top:12px" height="40px"/> iOS</h2>
         <strong>In-App Purchase with a single line of code</strong>
         <ul class="actions">
-            <li><a href="https://github.com/soomla/ios-store/zipball/master" onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'ios_code_download', 'Someone wants our ZIP !']);">Download <strong>ZIP File</strong></a></li>
-            <li><a href="https://github.com/soomla/ios-store/tarball/master" onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'ios_code_download', 'Someone wants our TAR !']);">Download <strong>TAR Ball</strong></a></li>
-            <li><a href="https://github.com/soomla/ios-store" onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'ios_project_view', 'Someone wants to view our project !']);">View On <strong>GitHub</strong></a></li>
+            <li><a href="https://github.com/soomla/ios-store/zipball/master"
+                   onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'ios_code_download', 'Someone wants our ZIP !']);">Download
+                <strong>ZIP File</strong></a></li>
+            <li><a href="https://github.com/soomla/ios-store/tarball/master"
+                   onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'ios_code_download', 'Someone wants our TAR !']);">Download
+                <strong>TAR Ball</strong></a></li>
+            <li><a href="https://github.com/soomla/ios-store"
+                   onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'ios_project_view', 'Someone wants to view our project !']);">View
+                On <strong>GitHub</strong></a></li>
         </ul>
-		
-		<h2><img src="img/cocos.png" style="margin-top:12px" height="40px" /> COCOS2d-X</h2>
+
+        <h2><img src="img/cocos.png" style="margin-top:12px" height="40px"/> COCOS2d-X</h2>
         <strong>Extension for the popluar 2D framework</strong>
         <ul class="actions">
-            <li><a href="https://github.com/soomla/cocos2dx-store/zipball/master" onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'cocos_code_download', 'Someone wants our ZIP !']);">Download <strong>ZIP File</strong></a></li>
-            <li><a href="https://github.com/soomla/cocos2dx-store/tarball/master" onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'cocos_code_download', 'Someone wants our TAR !']);">Download <strong>TAR Ball</strong></a></li>
-            <li><a href="https://github.com/soomla/cocos2dx-store" onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'cocos_project_view', 'Someone wants to view our project !']);">View On <strong>GitHub</strong></a></li>
+            <li><a href="https://github.com/soomla/cocos2dx-store/zipball/master"
+                   onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'cocos_code_download', 'Someone wants our ZIP !']);">Download
+                <strong>ZIP File</strong></a></li>
+            <li><a href="https://github.com/soomla/cocos2dx-store/tarball/master"
+                   onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'cocos_code_download', 'Someone wants our TAR !']);">Download
+                <strong>TAR Ball</strong></a></li>
+            <li><a href="https://github.com/soomla/cocos2dx-store"
+                   onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'cocos_project_view', 'Someone wants to view our project !']);">View
+                On <strong>GitHub</strong></a></li>
         </ul>
-		
-		<h2><img src="img/coming-soon.png" width="35px" style="position: absolute; left: 0;" /><img src="img/unity.png" style="margin-top:12px" height="40px" /> Unity</h2>
+
+        <h2><img src="img/coming-soon.png" width="35px" style="position: absolute; left: 0;"/><img src="img/unity.png"
+                                                                                                   style="margin-top:12px"
+                                                                                                   height="40px"/> Unity
+        </h2>
         <strong>Plugin for the leading 3D game engine</strong>
     </header>
 
+    <section>
 
-<div class="facebook">
-    <fb:like href="https://www.facebook.com/The.SOOMLA.Project" send="false" layout="box_count" width="50" show_faces="false"></fb:like>
-</div>
+                        <a href="https://github.com/soomla/"><img style="position: absolute; top: 0; right: 0; border: 0;"
+                                                                  src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
+                                                                  alt="Fork me on GitHub"></a>
 
-<div class="oss-bar">
+                        <p><img src="https://dl.dropbox.com/u/88676957/SoomlaLogo_BlueLogo.png" alt="SOOMLA LOGO"></p>
 
+                        <h1>Welcome to The SOOMLA Project</h1>
+
+                        <p>The SOOMLA Project is an open source framework for virtual economies in mobile games. Our goal is to help mobile game
+                            developers easier implementation of virtual currencies, virtual goods and in-app purchases. The framework includes:
+                        <ul>
+                            <li>Data model and storage convention for virtual goods, virtual currencies and common game economy mechanics.</li>
+                            <li>Plugins for leading game development platforms such as Cocos2d and Unity as well as support for Native iOS and
+                                Android code.
+                            </li>
+                            <li>APIs for simplifying In-App Purchases to a single line of code including increased security and event
+                                handling.
+                            </li>
+                            <li>Templates and themes for virtual economies and store-front based on pre-optimized and user intuitive layouts.
+                            </li>
+                            <li>Admin console for dynamically updating and optimizing virtual economy attributes and game economy mechanics.
+                            </li>
+                        </ul>
+                        </p>
+
+
+                        <a name="ios_anchor"></a>
+
+                        <div style="margin-bottom: 10px;">
+                            <h1 style="display: inline;">ios-store</h1>
+                            <iframe src="http://ghbtns.com/github-btn.html?user=soomla&repo=ios-store&type=watch&count=true"
+                                    allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="20px"
+                                    style="float: right; margin-top: 5px;"></iframe>
+                            <iframe src="http://ghbtns.com/github-btn.html?user=soomla&repo=ios-store&type=fork&count=true"
+                                    allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="20px"
+                                    style="float: right; margin-top: 5px;"></iframe>
+                        </div>
+
+                        <p>Didn't you ever wanted an in-app purchase one liner that looks like this:</p>
+
+                        <div class="highlight"><pre>    <span class="p">[[</span><span class="n">StoreController</span> <span class="n">getInstance</span><span
+                                class="p">]</span> <span class="nl">buyCurrencyPackWithProcuctId:</span><span class="s">@"[Your product id here]"</span><span
+                                class="p">]</span>
+                                    </pre>
+                        </div>
+
+                        <p>The ios-store is our ios-falvored code initiative part of The SOOMLA Project. It is an iOS SDK that simplifies the
+                            App Store's in-app purchasing API and complements it with storage, security and event handling. The project also
+                            includes a sample app for reference. </p>
+
+                        <h2>Usage Examples</h2>
+
+                        <p>Lets say you have a VirtualCurrencyPack you call TEN_COINS_PACK, a VirtualCurrency you call COIN_CURRENCY and a
+                            VirtualCategory you call CURRENCYPACKS_CATEGORY:</p>
+
+                        <div class="highlight"><pre><span class="n">VirtualCurrencyPack</span><span class="o">*</span> <span class="n">TEN_COINS_PACK</span> <span
+                                class="o">=</span> <span class="p">[[</span><span class="n">VirtualCurrencyPack</span> <span
+                                class="n">alloc</span><span class="p">]</span> <span class="nl">initWithName:</span><span
+                                class="s">@"10 Coins"</span>
+                                                                                  <span class="nl">andDescription:</span><span class="s">@"A pack of 10 coins"</span>
+                                                                                  <span class="nl">andImgFilePath:</span><span class="s">@"themes/awsomegame/img/coins/10_coins.png"</span>
+                                                                                       <span class="nl">andItemId:</span><span class="s">@"10_coins"</span>
+                                                                                        <span class="nl">andPrice:</span><span
+                                    class="mf">0.99</span>
+                                                                                    <span class="nl">andProductId:</span><span class="n">TEN_COINS_PACK_PRODUCT_ID</span>
+                                                                               <span class="nl">andCurrencyAmount:</span><span
+                                    class="mi">10</span>
+                                                                                     <span class="nl">andCurrency:</span><span class="n">COIN_CURRENCY</span>
+                                                                                     <span class="nl">andCategory:</span><span class="n">CURRENCYPACKS_CATEGORY</span><span
+                                    class="p">];</span>
+                                    </pre>
+    </div>
 
     <ul>
-        <li><a class="android" href="#android_anchor">android<br/><img src="img/black_android_logo.png" style="margin-top:14px" height="40px" /></a></li>
-		<li><a class="ios" href="#ios_anchor">ios<br/><img src="img/apple-logo.png" style="margin-top:14px" height="40px" /></a></li>
-        <li><a class="cocos2dx" href="#cocos_anchor">cocos2d-x<br/><img src="img/cocos.png" style="margin-top:14px" height="40px" /></a></li>
-        <li><a class="unity" href="#unity_anchor">unity 3D<br/><div style="position:relative;"><img src="img/coming-soon.png" width="35px" style="position: absolute; left: 0;" /><img src="img/unity.png" style="margin-top:14px" height="40px" /></div></a></li>
+        <li>
+            <p>Add 10 coins to the virtual currency with itemId "currency_coin":</p>
+
+            <div class="highlight"><pre><span class="n">VirtualCurrency</span><span class="o">*</span> <span
+                    class="n">coin</span> <span class="o">=</span> <span class="p">[[</span><span class="n">StoreInfo</span> <span
+                    class="n">getInstance</span><span class="p">]</span> <span class="nl">currencyWithItemId:</span><span
+                    class="s">@"currency_coin"</span><span class="p">];</span>
+                <span class="p">[[[</span><span class="n">StorageManager</span> <span class="n">getInstance</span><span
+                        class="p">]</span> <span class="n">virtualCurrencyStorage</span><span class="p">]</span> <span
+                        class="nl">addAmount:</span><span class="mi">10</span> <span class="nl">toCurrency:</span><span
+                        class="n">coin</span><span class="p">];</span>
+                </pre>
+            </div>
+        </li>
+        <li>
+            <p>Remove 10 virtual goods with itemId "green_hat":</p>
+
+            <div class="highlight"><pre><span class="n">VirtualGood</span><span class="o">*</span> <span
+                    class="n">greenHat</span> <span class="o">=</span> <span class="p">[[</span><span
+                    class="n">StoreInfo</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">goodWithItemId:</span><span
+                    class="s">@"green_hat"</span><span class="p">];</span>
+                <span class="p">[[[</span><span class="n">StorageManager</span> <span class="n">getInstance</span><span
+                        class="p">]</span> <span class="n">virtualGoodStorage</span><span class="p">]</span> <span
+                        class="nl">removeAmount:</span><span class="mi">10</span> <span class="nl">fromGood:</span><span
+                        class="n">greenHat</span><span class="p">];</span>
+                </pre>
+            </div>
+        </li>
+        <li>
+            <p>Get the current balance of green hats (virtual goods with itemId "green_hat"):</p>
+
+            <div class="highlight"><pre><span class="n">VirtualGood</span><span class="o">*</span> <span
+                    class="n">greenHat</span> <span class="o">=</span> <span class="p">[[</span><span
+                    class="n">StoreInfo</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">goodWithItemId:</span><span
+                    class="s">@"green_hat"</span><span class="p">];</span>
+                <span class="kt">int</span> <span class="n">greenHatsBalance</span> <span class="o">=</span> <span
+                        class="p">[[[</span><span class="n">StorageManager</span> <span class="n">getInstance</span><span
+                        class="p">]</span> <span class="n">virtualGoodStorage</span><span class="p">]</span> <span
+                        class="nl">getBalanceForGood:</span><span class="n">greenHat</span><span class="p">];</span>
+                </pre>
+            </div>
+        </li>
     </ul>
-</div>
-<section>
 
-<a href="https://github.com/soomla/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-        <p><img src="https://dl.dropbox.com/u/88676957/SoomlaLogo_BlueLogo.png" alt="SOOMLA LOGO">
-            </p>
+    <p>&nbsp;</p>
 
-<h1>Welcome to The SOOMLA Project</h1>
-
-
-<p>The SOOMLA Project is an open source framework for virtual economies in mobile games. Our goal is to help mobile game developers easier implementation of virtual currencies, virtual goods and in-app purchases. The framework includes:
-    <ul>
-        <li>Data model and storage convention for virtual goods, virtual currencies and common game economy mechanics.</li>
-        <li>Plugins for leading game development platforms such as Cocos2d and Unity as well as support for Native iOS and Android code.</li>
-        <li>APIs for simplifying In-App Purchases to a single line of code including increased security and event handling.</li>
-        <li>Templates and themes for virtual economies and store-front based on pre-optimized and user intuitive layouts.</li>
-        <li>Admin console for dynamically updating and optimizing virtual economy attributes and game economy mechanics.</li>
-    </ul>
-</p>
-
-<!--<h1>Projects we Already Opened</h1>-->
-<!--<ul>-->
-        <!--<li><strong>ios-store</strong> - In App Purchasing Library for iOS </li>-->
-
-		<!--<li><strong>android-store</strong> - In App Billing Library for Android</li>-->
-<!--</ul>-->
-
-
-    <a name="ios_anchor"></a>
-
-<div style="margin-bottom: 10px;">
-    <h1 style="display: inline;">ios-store</h1>
-    <iframe src="http://ghbtns.com/github-btn.html?user=soomla&repo=ios-store&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="20px" style="float: right; margin-top: 5px;"></iframe>
-    <iframe src="http://ghbtns.com/github-btn.html?user=soomla&repo=ios-store&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="20px" style="float: right; margin-top: 5px;"></iframe>
-</div>
-
-
-<p>Didn't you ever wanted an in-app purchase one liner that looks like this:</p>
-
-<div class="highlight"><pre>    <span class="p">[[</span><span class="n">StoreController</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">buyCurrencyPackWithProcuctId:</span><span class="s">@"[Your product id here]"</span><span class="p">]</span>
-</pre></div>
-
-<p>The ios-store is our ios-falvored code initiative part of The SOOMLA Project. It is an iOS SDK that simplifies the App Store's in-app purchasing API and complements it with storage, security and event handling. The project also includes a sample app for reference. </p>
-
-<h2>Usage Examples</h2>
-
-<p>Lets say you have a VirtualCurrencyPack you call TEN_COINS_PACK, a VirtualCurrency you call COIN_CURRENCY and a VirtualCategory you call CURRENCYPACKS_CATEGORY:</p>
-
-<div class="highlight"><pre><span class="n">VirtualCurrencyPack</span><span class="o">*</span> <span class="n">TEN_COINS_PACK</span> <span class="o">=</span> <span class="p">[[</span><span class="n">VirtualCurrencyPack</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithName:</span><span class="s">@"10 Coins"</span>
-                                              <span class="nl">andDescription:</span><span class="s">@"A pack of 10 coins"</span>
-                                              <span class="nl">andImgFilePath:</span><span class="s">@"themes/awsomegame/img/coins/10_coins.png"</span>
-                                                   <span class="nl">andItemId:</span><span class="s">@"10_coins"</span>
-                                                    <span class="nl">andPrice:</span><span class="mf">0.99</span>
-                                                <span class="nl">andProductId:</span><span class="n">TEN_COINS_PACK_PRODUCT_ID</span>
-                                           <span class="nl">andCurrencyAmount:</span><span class="mi">10</span>
-                                                 <span class="nl">andCurrency:</span><span class="n">COIN_CURRENCY</span>
-                                                 <span class="nl">andCategory:</span><span class="n">CURRENCYPACKS_CATEGORY</span><span class="p">];</span>
-</pre></div>
-
-<ul>
-<li>
-<p>Add 10 coins to the virtual currency with itemId "currency_coin":</p>
-
-<div class="highlight"><pre><span class="n">VirtualCurrency</span><span class="o">*</span> <span class="n">coin</span> <span class="o">=</span> <span class="p">[[</span><span class="n">StoreInfo</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">currencyWithItemId:</span><span class="s">@"currency_coin"</span><span class="p">];</span>
-<span class="p">[[[</span><span class="n">StorageManager</span> <span class="n">getInstance</span><span class="p">]</span> <span class="n">virtualCurrencyStorage</span><span class="p">]</span> <span class="nl">addAmount:</span><span class="mi">10</span> <span class="nl">toCurrency:</span><span class="n">coin</span><span class="p">];</span>
-</pre></div>
-</li>
-<li>
-<p>Remove 10 virtual goods with itemId "green_hat":</p>
-
-<div class="highlight"><pre><span class="n">VirtualGood</span><span class="o">*</span> <span class="n">greenHat</span> <span class="o">=</span> <span class="p">[[</span><span class="n">StoreInfo</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">goodWithItemId:</span><span class="s">@"green_hat"</span><span class="p">];</span>
-<span class="p">[[[</span><span class="n">StorageManager</span> <span class="n">getInstance</span><span class="p">]</span> <span class="n">virtualGoodStorage</span><span class="p">]</span> <span class="nl">removeAmount:</span><span class="mi">10</span> <span class="nl">fromGood:</span><span class="n">greenHat</span><span class="p">];</span>
-</pre></div>
-</li>
-<li>
-<p>Get the current balance of green hats (virtual goods with itemId "green_hat"):</p>
-
-<div class="highlight"><pre><span class="n">VirtualGood</span><span class="o">*</span> <span class="n">greenHat</span> <span class="o">=</span> <span class="p">[[</span><span class="n">StoreInfo</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">goodWithItemId:</span><span class="s">@"green_hat"</span><span class="p">];</span>
-<span class="kt">int</span> <span class="n">greenHatsBalance</span> <span class="o">=</span> <span class="p">[[[</span><span class="n">StorageManager</span> <span class="n">getInstance</span><span class="p">]</span> <span class="n">virtualGoodStorage</span><span class="p">]</span> <span class="nl">getBalanceForGood:</span><span class="n">greenHat</span><span class="p">];</span>
-</pre></div>
-</li>
-</ul>
-
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+    <p>&nbsp;</p>
 
     <a name="android_anchor"></a>
+
     <div style="margin-bottom: 10px;">
         <h1 style="display: inline;">android-store</h1>
-        <iframe src="http://ghbtns.com/github-btn.html?user=soomla&repo=android-store&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px" style="float: right; margin-top: 5px;"></iframe>
-        <iframe src="http://ghbtns.com/github-btn.html?user=soomla&repo=android-store&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px" style="float: right; margin-top: 5px;"></iframe>
+        <iframe src="http://ghbtns.com/github-btn.html?user=soomla&repo=android-store&type=watch&count=true"
+                allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"
+                style="float: right; margin-top: 5px;"></iframe>
+        <iframe src="http://ghbtns.com/github-btn.html?user=soomla&repo=android-store&type=fork&count=true"
+                allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"
+                style="float: right; margin-top: 5px;"></iframe>
     </div>
 
 
-<p>Didn't you ever wanted an in-app purchase one liner that looks like this:</p>
+    <p>Didn't you ever wanted an in-app purchase one liner that looks like this:</p>
 
-<div class="highlight"><pre><span class="n">StoreController</span><span class="o">.</span><span class="na">buyCurrencyPack</span><span class="o">(</span><span class="n">TEN_COINS_PACK</span><span class="o">.</span><span class="na">getProductId</span><span class="o">());</span>
-</pre></div>
+    <div class="highlight"><pre><span class="n">StoreController</span><span class="o">.</span><span class="na">buyCurrencyPack</span><span
+            class="o">(</span><span class="n">TEN_COINS_PACK</span><span class="o">.</span><span
+            class="na">getProductId</span><span class="o">());</span>
+    </pre>
+    </div>
 
-<p>The android-store is our first open code initiative as part of The SOOMLA Project. It is a Java API that simplifies Google Play's in-app purchasing API and complements it with storage, security and event handling. The project also includes a sample app for reference.</p>
+    <p>The android-store is our first open code initiative as part of The SOOMLA Project. It is a Java API that simplifies
+        Google Play's in-app purchasing API and complements it with storage, security and event handling. The project also
+        includes a sample app for reference.</p>
 
-<h2>Usage Example</h2>
+    <h2>Usage Example</h2>
 
-<p>Lets say you have a <em>VirtualCurrencyPack</em> you call <code>TEN_COINS_PACK</code>, a <em>VirtualCurrency</em> you call <code>COIN_CURRENCY</code> and a <em>VirtualCategory</em> you call <code>CURRENCYPACKS_CATEGORY</code>:</p>
+    <p>Lets say you have a <em>VirtualCurrencyPack</em> you call <code>TEN_COINS_PACK</code>, a <em>VirtualCurrency</em> you
+        call <code>COIN_CURRENCY</code> and a <em>VirtualCategory</em> you call <code>CURRENCYPACKS_CATEGORY</code>:</p>
 
-<div class="highlight"><pre><span class="n">VirtualCurrencyPack</span> <span class="n">TEN_COINS_PACK</span> <span class="o">=</span> <span class="k">new</span> <span class="n">VirtualCurrencyPack</span><span class="o">(</span>
-        <span class="s">"10 Coins"</span><span class="o">,</span>                <span class="c1">// name</span>
-        <span class="s">"A pack of 10 coins"</span><span class="o">,</span>      <span class="c1">// description</span>
-        <span class="s">"themes/awsomegame/img/coins/10_coins.png"</span><span class="o">,</span> <span class="c1">// image file path</span>
-        <span class="s">"10_coins"</span><span class="o">,</span>                <span class="c1">// item id</span>
-        <span class="n">TEN_COINS_PACK_PRODUCT_ID</span><span class="o">,</span> <span class="c1">// product id in Google Market</span>
-        <span class="mf">1.99</span><span class="o">,</span>                      <span class="c1">// actual price in $$</span>
-        <span class="mi">10</span><span class="o">,</span>                        <span class="c1">// number of currencies in the pack</span>
-        <span class="n">COIN_CURRENCY</span><span class="o">,</span>             <span class="c1">// the associated currency</span>
-        <span class="n">CURRENCYPACKS_CATEGORY</span><span class="o">);</span>   <span class="c1">// the associated category</span>
-</pre></div>
+    <div class="highlight"><pre><span class="n">VirtualCurrencyPack</span> <span class="n">TEN_COINS_PACK</span> <span
+            class="o">=</span> <span class="k">new</span> <span class="n">VirtualCurrencyPack</span><span class="o">(</span>
+            <span class="s">"10 Coins"</span><span class="o">,</span>                <span class="c1">// name</span>
+            <span class="s">"A pack of 10 coins"</span><span class="o">,</span>      <span class="c1">// description</span>
+            <span class="s">"themes/awsomegame/img/coins/10_coins.png"</span><span class="o">,</span> <span class="c1">// image file path</span>
+            <span class="s">"10_coins"</span><span class="o">,</span>                <span class="c1">// item id</span>
+            <span class="n">TEN_COINS_PACK_PRODUCT_ID</span><span class="o">,</span> <span class="c1">// product id in Google Market</span>
+            <span class="mf">1.99</span><span class="o">,</span>                      <span
+                class="c1">// actual price in $$</span>
+            <span class="mi">10</span><span class="o">,</span>                        <span class="c1">// number of currencies in the pack</span>
+            <span class="n">COIN_CURRENCY</span><span class="o">,</span>             <span class="c1">// the associated currency</span>
+            <span class="n">CURRENCYPACKS_CATEGORY</span><span class="o">);</span>   <span class="c1">// the associated category</span>
+    </pre>
+    </div>
 
-<ul>
-<li>
-<p>Add 10 coins to the virtual currency with itemId "currency_coin":</p>
+    <ul>
+        <li>
+            <p>Add 10 coins to the virtual currency with itemId "currency_coin":</p>
 
-<div class="highlight"><pre><span class="n">VirtualCurrency</span> <span class="n">coin</span> <span class="o">=</span> <span class="n">StoreInfo</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getVirtualCurrencyByItemId</span><span class="o">(</span><span class="s">"currency_coin"</span><span class="o">);</span>
-<span class="n">StorageManager</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getVirtualCurrencyStorage</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="n">coin</span><span class="o">,</span> <span class="mi">10</span><span class="o">);</span>
-</pre></div>
-</li>
-<li>
-<p>Remove 10 virtual goods with itemId "green_hat":</p>
+            <div class="highlight"><pre><span class="n">VirtualCurrency</span> <span class="n">coin</span> <span
+                    class="o">=</span> <span class="n">StoreInfo</span><span class="o">.</span><span
+                    class="na">getInstance</span><span class="o">().</span><span
+                    class="na">getVirtualCurrencyByItemId</span><span class="o">(</span><span
+                    class="s">"currency_coin"</span><span class="o">);</span>
+    <span class="n">StorageManager</span><span class="o">.</span><span class="na">getInstance</span><span
+                        class="o">().</span><span class="na">getVirtualCurrencyStorage</span><span class="o">().</span><span
+                        class="na">add</span><span class="o">(</span><span class="n">coin</span><span
+                        class="o">,</span> <span class="mi">10</span><span class="o">);</span>
+    </pre>
+            </div>
+        </li>
+        <li>
+            <p>Remove 10 virtual goods with itemId "green_hat":</p>
 
-<div class="highlight"><pre><span class="n">VirtualGood</span> <span class="n">greenHat</span> <span class="o">=</span> <span class="n">StoreInfo</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getVirtualGoodByItemId</span><span class="o">(</span><span class="s">"green_hat"</span><span class="o">);</span>
-<span class="n">StorageManager</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getVirtualGoodsStorage</span><span class="o">().</span><span class="na">remove</span><span class="o">(</span><span class="n">greenHat</span><span class="o">,</span> <span class="mi">10</span><span class="o">);</span>
-</pre></div>
-</li>
-<li>
-<p>Get the current balance of green hats (virtual goods with itemId "green_hat"):</p>
+            <div class="highlight"><pre><span class="n">VirtualGood</span> <span class="n">greenHat</span> <span
+                    class="o">=</span> <span class="n">StoreInfo</span><span class="o">.</span><span
+                    class="na">getInstance</span><span class="o">().</span><span
+                    class="na">getVirtualGoodByItemId</span><span class="o">(</span><span class="s">"green_hat"</span><span
+                    class="o">);</span>
+    <span class="n">StorageManager</span><span class="o">.</span><span class="na">getInstance</span><span
+                        class="o">().</span><span class="na">getVirtualGoodsStorage</span><span class="o">().</span><span
+                        class="na">remove</span><span class="o">(</span><span class="n">greenHat</span><span
+                        class="o">,</span> <span class="mi">10</span><span class="o">);</span>
+    </pre>
+            </div>
+        </li>
+        <li>
+            <p>Get the current balance of green hats (virtual goods with itemId "green_hat"):</p>
 
-<div class="highlight"><pre><span class="n">VirtualGood</span> <span class="n">greenHat</span> <span class="o">=</span> <span class="n">StoreInfo</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getVirtualGoodByItemId</span><span class="o">(</span><span class="s">"green_hat"</span><span class="o">);</span>
-<span class="kt">int</span> <span class="n">greenHatsBalance</span> <span class="o">=</span> <span class="n">StorageManager</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getVirtualGoodsStorage</span><span class="o">().</span><span class="na">getBalance</span><span class="o">(</span><span class="n">greenHat</span><span class="o">);</span>
-</pre></div>
-</li>
-</ul>
+            <div class="highlight"><pre><span class="n">VirtualGood</span> <span class="n">greenHat</span> <span
+                    class="o">=</span> <span class="n">StoreInfo</span><span class="o">.</span><span
+                    class="na">getInstance</span><span class="o">().</span><span
+                    class="na">getVirtualGoodByItemId</span><span class="o">(</span><span class="s">"green_hat"</span><span
+                    class="o">);</span>
+    <span class="kt">int</span> <span class="n">greenHatsBalance</span> <span class="o">=</span> <span class="n">StorageManager</span><span
+                        class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getVirtualGoodsStorage</span><span
+                        class="o">().</span><span class="na">getBalance</span><span class="o">(</span><span class="n">greenHat</span><span
+                        class="o">);</span>
+    </pre>
+            </div>
+        </li>
+    </ul>
 
 
+    <a name="cocos_anchor"></a>
 
-<a name="cocos_anchor"></a>
+    <div style="margin-bottom: 10px;">
+        <h1 style="display: inline;">cocos2dx-store</h1>
+        <iframe src="http://ghbtns.com/github-btn.html?user=soomla&repo=cocos2dx-store&type=watch&count=true"
+                allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="20px"
+                style="float: right; margin-top: 5px;"></iframe>
+        <iframe src="http://ghbtns.com/github-btn.html?user=soomla&repo=cocos2dx-store&type=fork&count=true"
+                allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="20px"
+                style="float: right; margin-top: 5px;"></iframe>
+    </div>
 
-<div style="margin-bottom: 10px;">
-    <h1 style="display: inline;">cocos2dx-store</h1>
-    <iframe src="http://ghbtns.com/github-btn.html?user=soomla&repo=cocos2dx-store&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="20px" style="float: right; margin-top: 5px;"></iframe>
-    <iframe src="http://ghbtns.com/github-btn.html?user=soomla&repo=cocos2dx-store&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="20px" style="float: right; margin-top: 5px;"></iframe>
+    <p>Didn't you ever wanted an in-app purchase one liner that looks like this:</p>
+
+    <div class="highlight"><pre>    <span class="n">cocos2dx_StoreController</span><span class="o">::</span><span class="n">buyCurrencyPack</span><span
+            class="p">(</span><span class="s">"[Your product id here]"</span><span class="p">);</span>
+    </pre>
+    </div>
+
+    <p>The cocod2dx-store shows you how to use The SOOMLA Project's <a href="https://github.com/soomla/android-store">android-store</a>
+        and <a href="https://github.com/soomla/ios-store">ios-store</a> in your <strong>cocos2d-x</strong> project.
+        In cocos2dx-store there are 3 relevant scenes: MainScene, StoreAScene and StoreBScene:
+    <ul>
+        <li>MainScene - the welcome scene from where you open the store</li>
+        <li>StoreAScene - the store's first window that contains a list of VirtualGoods
+        <li>
+        <li>StoreBScene - the store's second window that contains a list of VirtualCurrencyPacks</li>
+    </ul>
+    </p>
+
+    <h2>Usage Examples</h2>
+
+    <p>Lets say you have a VirtualCurrencyPack you call TEN_COINS_PACK, a VirtualCurrency you call COIN_CURRENCY and a
+        VirtualCategory you call CURRENCYPACKS_CATEGORY:</p>
+
+    <div class="highlight"><pre>
+            <span class="cp">#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)</span>
+            <span class="n">VirtualCurrencyPack</span> <span class="n">TEN_COINS_PACK</span> <span class="o">=</span> <span
+            class="k">new</span> <span class="n">VirtualCurrencyPack</span><span class="o">(</span>
+            <span class="s">"10 Coins"</span><span class="o">,</span>                <span class="c1">// name</span>
+            <span class="s">"A pack of 10 coins"</span><span class="o">,</span>      <span class="c1">// description</span>
+            <span class="s">"10_coins"</span><span class="o">,</span>                <span class="c1">// item id</span>
+            <span class="n">TEN_COINS_PACK_PRODUCT_ID</span><span class="o">,</span> <span class="c1">// product id in Google Market</span>
+            <span class="mf">1.99</span><span class="o">,</span>                      <span
+            class="c1">// actual price in $$</span>
+            <span class="mi">10</span><span class="o">,</span>                        <span class="c1">// number of currencies in the pack</span>
+            <span class="n">COIN_CURRENCY</span><span class="o">);</span>            <span class="c1">// the associated currency</span>
+
+
+            <span class="cp">#elif (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)</span>
+            <span class="n">VirtualCurrencyPack</span><span class="o">*</span> <span class="n">TEN_COINS_PACK</span> <span
+            class="o">=</span> <span class="p">[[</span><span class="n">VirtualCurrencyPack</span> <span
+            class="n">alloc</span><span class="p">]</span> <span class="nl">initWithName:</span><span
+            class="s">@"10 Coins"</span>
+                                                  <span class="nl">andDescription:</span><span class="s">@"A pack of 10 coins"</span>
+                                                       <span class="nl">andItemId:</span><span class="s">@"10_coins"</span>
+                                                        <span class="nl">andPrice:</span><span class="mf">0.99</span>
+                                                    <span class="nl">andProductId:</span><span class="n">TEN_COINS_PACK_PRODUCT_ID</span>
+                                               <span class="nl">andCurrencyAmount:</span><span class="mi">10</span>
+                                                     <span class="nl">andCurrency:</span><span
+            class="n">COIN_CURRENCY</span><span class="p">];</span>
+            <span class="cp">#endif</span>
+    </pre>
+    </div>
+
+    <ul>
+        <li>
+            <p>Add 10 coins to the virtual currency with itemId "currency_coin":</p>
+
+            <div class="highlight"><pre><span class="n">string</span> <span class="n">itemId</span><span
+                    class="p">(</span><span class="s">"currency_coin"</span><span class="p">);</span>
+    <span class="n">cocos2dx_StoreInventory</span><span class="o">::</span><span class="n">addCurrencyAmount</span><span
+                        class="p">(</span><span class="n">itemId</span><span class="p">,</span> <span
+                        class="mi">10</span><span class="p">);</span>
+    </pre>
+            </div>
+        </li>
+        <li>
+            <p>Remove 10 virtual goods with itemId "green_hat":</p>
+
+            <div class="highlight"><pre><span class="n">string</span> <span class="n">itemId</span><span
+                    class="p">(</span><span class="s">"green_hat"</span><span class="p">);</span>
+    <span class="n">cocos2dx_StoreInventory</span><span class="o">::</span><span class="n">removeGoodAmount</span><span
+                        class="p">(</span><span class="n">itemId</span><span class="p">,</span> <span
+                        class="mi">10</span><span class="p">);</span>
+    </pre>
+            </div>
+        </li>
+        <li>
+            <p>Get the current balance of green hats (virtual goods with itemId "green_hat"):</p>
+
+            <div class="highlight"><pre><span class="n">string</span> <span class="n">itemId</span><span
+                    class="p">(</span><span class="s">"green_hat"</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">balance</span> <span class="o">=</span> <span class="n">cocos2dx_StoreInventory</span><span
+                        class="o">::</span><span class="n">getCurrencyBalance</span><span class="p">(</span><span class="n">itemId</span><span
+                        class="p">);</span>
+    </pre>
+            </div>
+
+        </li>
+    </ul>
+
+
+    <p>&nbsp;</p>
+
+    <p>&nbsp;</p>
+
+    <h1>General Information</h1>
+
+    <p>&nbsp;</p>
+
+    <h2>Contribution</h2>
+
+    <p>We want you!</p>
+
+    <p>Fork -&gt; Clone -&gt; Implement -&gt; Test -&gt; Pull-Request. We have great RESPECT for contributors.</p>
+
+    <h2>SOOMLA, Elsewhere ...</h2>
+
+    <ul>
+        <li><a href="http://www.soom.la/">Website</a></li>
+        <li>
+            <a href="http://www.facebook.com/The.SOOMLA.Project">On Facebook</a>.
+        </li>
+        <li><a href="https://angel.co/the-soomla-project">On AngelList</a></li>
+    </ul>
+    <h2>License</h2>
+
+    <p>MIT License. Copyright (c) 2012 SOOMLA. <a href="http://project.soom.la">http://project.soom.la</a></p>
+
+    <ul>
+        <li><a href="http://www.opensource.org/licenses/MIT">http://www.opensource.org/licenses/MIT</a></li>
+    </ul>
+    </section>
+
+    <footer>
+    </footer>
 </div>
 
-<p>Didn't you ever wanted an in-app purchase one liner that looks like this:</p>
-
-<div class="highlight"><pre>    <span class="n">cocos2dx_StoreController</span><span class="o">::</span><span class="n">buyCurrencyPack</span><span class="p">(</span><span class="s">"[Your product id here]"</span><span class="p">);</span>
-</pre></div>
-
-<p>The cocod2dx-store shows you how to use The SOOMLA Project's <a href="https://github.com/soomla/android-store">android-store</a> and <a href="https://github.com/soomla/ios-store">ios-store</a> in your <strong>cocos2d-x</strong> project.
-    In cocos2dx-store there are 3 relevant scenes: MainScene, StoreAScene and StoreBScene:
-<ul>
-    <li>MainScene - the welcome scene from where you open the store</li>
-    <li>StoreAScene - the store's first window that contains a list of VirtualGoods<li>
-    <li>StoreBScene - the store's second window that contains a list of VirtualCurrencyPacks</li>
-</ul>
-</p>
-
-<h2>Usage Examples</h2>
-
-<p>Lets say you have a VirtualCurrencyPack you call TEN_COINS_PACK, a VirtualCurrency you call COIN_CURRENCY and a VirtualCategory you call CURRENCYPACKS_CATEGORY:</p>
-
-<div class="highlight"><pre>
-		<span class="cp">#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)</span>
-		<span class="n">VirtualCurrencyPack</span> <span class="n">TEN_COINS_PACK</span> <span class="o">=</span> <span class="k">new</span> <span class="n">VirtualCurrencyPack</span><span class="o">(</span>
-        <span class="s">"10 Coins"</span><span class="o">,</span>                <span class="c1">// name</span>
-        <span class="s">"A pack of 10 coins"</span><span class="o">,</span>      <span class="c1">// description</span>
-        <span class="s">"10_coins"</span><span class="o">,</span>                <span class="c1">// item id</span>
-        <span class="n">TEN_COINS_PACK_PRODUCT_ID</span><span class="o">,</span> <span class="c1">// product id in Google Market</span>
-        <span class="mf">1.99</span><span class="o">,</span>                      <span class="c1">// actual price in $$</span>
-        <span class="mi">10</span><span class="o">,</span>                        <span class="c1">// number of currencies in the pack</span>
-        <span class="n">COIN_CURRENCY</span><span class="o">);</span>            <span class="c1">// the associated currency</span>
-
-
-		<span class="cp">#elif (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)</span>
-		<span class="n">VirtualCurrencyPack</span><span class="o">*</span> <span class="n">TEN_COINS_PACK</span> <span class="o">=</span> <span class="p">[[</span><span class="n">VirtualCurrencyPack</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithName:</span><span class="s">@"10 Coins"</span>
-                                              <span class="nl">andDescription:</span><span class="s">@"A pack of 10 coins"</span>
-                                                   <span class="nl">andItemId:</span><span class="s">@"10_coins"</span>
-                                                    <span class="nl">andPrice:</span><span class="mf">0.99</span>
-                                                <span class="nl">andProductId:</span><span class="n">TEN_COINS_PACK_PRODUCT_ID</span>
-                                           <span class="nl">andCurrencyAmount:</span><span class="mi">10</span>
-                                                 <span class="nl">andCurrency:</span><span class="n">COIN_CURRENCY</span><span class="p">];</span>
-		<span class="cp">#endif</span>
-</pre></div>
-
-<ul>
-    <li>
-        <p>Add 10 coins to the virtual currency with itemId "currency_coin":</p>
-
-        <div class="highlight"><pre><span class="n">string</span> <span class="n">itemId</span><span class="p">(</span><span class="s">"currency_coin"</span><span class="p">);</span>
-<span class="n">cocos2dx_StoreInventory</span><span class="o">::</span><span class="n">addCurrencyAmount</span><span class="p">(</span><span class="n">itemId</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
-</pre></div>
-    </li>
-    <li>
-        <p>Remove 10 virtual goods with itemId "green_hat":</p>
-
-        <div class="highlight"><pre><span class="n">string</span> <span class="n">itemId</span><span class="p">(</span><span class="s">"green_hat"</span><span class="p">);</span>
-<span class="n">cocos2dx_StoreInventory</span><span class="o">::</span><span class="n">removeGoodAmount</span><span class="p">(</span><span class="n">itemId</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
-</pre></div>
-    </li>
-    <li>
-        <p>Get the current balance of green hats (virtual goods with itemId "green_hat"):</p>
-
-        <div class="highlight"><pre><span class="n">string</span> <span class="n">itemId</span><span class="p">(</span><span class="s">"green_hat"</span><span class="p">);</span>
-<span class="kt">int</span> <span class="n">balance</span> <span class="o">=</span> <span class="n">cocos2dx_StoreInventory</span><span class="o">::</span><span class="n">getCurrencyBalance</span><span class="p">(</span><span class="n">itemId</span><span class="p">);</span>
-</pre></div>
-
-    </li>
-</ul>
-
-
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<h1>General Information</h1>
-<p>&nbsp;</p>
-<h2>Contribution</h2>
-
-<p>We want you!</p>
-
-<p>Fork -&gt; Clone -&gt; Implement -&gt; Test -&gt; Pull-Request. We have great RESPECT for contributors.</p>
-
-<h2>SOOMLA, Elsewhere ...</h2>
-
-<ul>
-<li><a href="http://www.soom.la/">Website</a></li>
-<li>
-<a href="http://www.facebook.com/The.SOOMLA.Project">On Facebook</a>.</li>
-<li><a href="https://angel.co/the-soomla-project">On AngelList</a></li>
-</ul><h2>License</h2>
-
-<p>MIT License. Copyright (c) 2012 SOOMLA. <a href="http://project.soom.la">http://project.soom.la</a></p>
-
-<ul>
-<li><a href="http://www.opensource.org/licenses/MIT">http://www.opensource.org/licenses/MIT</a></li>
-</ul>
-      </section>
-      <footer>
-      </footer>
-    </div>
-
-  </body>
+</body>
 </html>
