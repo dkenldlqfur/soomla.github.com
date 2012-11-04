@@ -294,11 +294,17 @@ footer {
     list-style: none;
     float: left;
     line-height: 0;
+
+    -webkit-transition:all 1.0s ease-in-out;
+    -moz-transition:all 1.0s ease-in-out;
+    -o-transition:all 1.0s ease-in-out;
+    transition:all 1.0s ease-in-out;
 }
 .oss-bar ul li img{
     margin-top:10px;
 }
 .oss-bar ul li a {
+    float: right;
     -moz-box-sizing:    border-box;
     -webkit-box-sizing: border-box;
     -ms-box-sizing:     border-box;
@@ -312,9 +318,11 @@ footer {
     /*text-indent: 120%;  stupid padding */
     white-space: nowrap;
     overflow: hidden;
+
     -webkit-transition: all 0.10s ease-in-out;
     -moz-transition: all 0.10s ease-in-out;
     transition: all 0.15s ease-in-out;
+
     text-align: center;
     font-size: 12px;
     color: #ffffff;
@@ -322,25 +330,25 @@ footer {
 .oss-bar ul li a:hover {
     margin-top: 0px;
 }
-.oss-bar a.ios {
+.oss-bar li.ios a{
     width: 60px;
     background-color: #577c99;
     /*background-position: -142px 22px;
     padding-right: 22px;  optical illusion */
 }
-.oss-bar a.android {
+.oss-bar li.android a{
     width: 60px;
     background-color: #A4C639;
 
 }
 
-.oss-bar a.cocos2dx {
+.oss-bar li.cocos2dx a{
     width: 60px;
     background-color: #fc723f;
 
 }
 
-.oss-bar a.unity {
+.oss-bar li.unity a{
     color: #000000;
     width: 60px;
     background-color: #f5f5f5;

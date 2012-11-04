@@ -30,14 +30,23 @@
 
     </script>
 
+
     <script type="text/javascript">
         $(function () {
             $(window).scroll(function () {
                 if ($(window).scrollTop() > 55) {
-                    $('.oss-bar').css("transform", "translateX(300px)");
+                    $('.oss-bar').css("transform", "translateX(200px)");
+                    $('.oss-bar .unity').css("transform", "translate(0px, 0px)");
+                    $('.oss-bar .cocos2dx').css("transform", "translate(60px, 60px)");
+                    $('.oss-bar .ios').css("transform", "translate(120px, 120px)");
+                    $('.oss-bar .android').css("transform", "translate(180px, 180px)");
                     //                  $('.facebook').css("transform","translateX(-" + ($(".wrapper").width()/3.79) + "px)");
                 } else {
                     $('.oss-bar').css("transform", "translateX(0px)");
+                    $('.oss-bar .unity').css("transform", "translate(0px, 0px)");
+                    $('.oss-bar .cocos2dx').css("transform", "translate(0px, 0px)");
+                    $('.oss-bar .ios').css("transform", "translate(0px, 0px)");
+                    $('.oss-bar .android').css("transform", "translate(0px, 0px)");
                     //                  $('.facebook').css("transform","translateX(0px)");
                 }
             });
@@ -67,13 +76,13 @@
 
     <div class="oss-bar">
         <ul>
-            <li><a class="android" href="#android_anchor">android<br/><img src="img/black_android_logo.png"
+            <li class="android"><a  href="#android_anchor">android<br/><img src="img/black_android_logo.png"
                                                                            style="margin-top:14px" height="40px"/></a></li>
-            <li><a class="ios" href="#ios_anchor">ios<br/><img src="img/apple-logo.png" style="margin-top:14px"
+            <li class="ios"><a  href="#ios_anchor">ios<br/><img src="img/apple-logo.png" style="margin-top:14px"
                                                                height="40px"/></a></li>
-            <li><a class="cocos2dx" href="#cocos_anchor">cocos2d-x<br/><img src="img/cocos.png" style="margin-top:14px"
+            <li class="cocos2dx"><a  href="#cocos_anchor">cocos2d-x<br/><img src="img/cocos.png" style="margin-top:14px"
                                                                             height="40px"/></a></li>
-            <li><a class="unity" href="#unity_anchor">unity 3D<br/>
+            <li class="unity"><a  href="#unity_anchor">unity 3D<br/>
 
                 <div style="position:relative;"><img src="img/coming-soon.png" width="35px"
                                                      style="position: absolute; left: 0;"/><img src="img/unity.png"
