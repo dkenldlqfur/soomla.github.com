@@ -13,13 +13,13 @@
 
 <script type="text/javascript">
     function start(theme, platform) {
-        $.get('http://refaelos.dyndns.tv:3001/init/' + theme, function(data) {
+        $.get($('#baseUrl').val() + '/init/' + theme, function(data) {
             generate(data.key, platform);
         });
     }
 
     function generate(key, platform) {
-        var url = 'http://refaelos.dyndns.tv:3001/generate/' + platform;
+        var url = $('#baseUrl').val() + '/generate/' + platform;
         $.post(
             url,
             {
@@ -88,6 +88,7 @@
 
     <fieldset>
         <legend>Demo Code Generator</legend>
+        <input id="baseUrl" type="text" placeholder="Base Url ..." value="http://refaelos.dyndns.tv:3001">
         <input id="assetsClassName" type="text" placeholder="Assets Class Name …" value="MuffinRushAssets">
         <input id="androidPackage" type="text" placeholder="Android package …" value="com.soomla.example.muffinRush">
         <input id="publicKey" type="text" placeholder="Publick key (default)…" disabled>
