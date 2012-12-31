@@ -91,10 +91,7 @@
                                                                         height="40px"/></a></li>
         <li class="unity"><a href="#unity_anchor">unity 3D<br/>
 
-            <div style="position:relative;"><img src="img/coming-soon.png" width="35px"
-                                                 style="position: absolute; left: 0;"/><img src="img/unity.png"
-                                                                                            style="margin-top:14px"
-                                                                                            height="40px"/></div>
+            <div style="position:relative;"><img src="img/unity.png" style="margin-top:14px" height="40px"/></div>
         </a></li>
     </ul>
 </div>
@@ -145,17 +142,17 @@
     <h2><img src="img/unity.png" style="margin-top:12px" height="40px"/> Unity
     </h2>
     <strong>Plugin for the leading 3D game engine</strong>
-    <!--<ul class="actions">-->
-        <!--<li><a href="https://github.com/soomla/unity3d-store/zipball/master"-->
-               <!--onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'code_download_unity', 'Someone wants our ZIP !']);">Download-->
-            <!--<strong>ZIP File</strong></a></li>-->
-        <!--<li><a href="https://github.com/soomla/unity3d-store/tarball/master"-->
-               <!--onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'code_download_unity', 'Someone wants our TAR !']);">Download-->
-            <!--<strong>TAR Ball</strong></a></li>-->
-        <!--<li><a href="https://github.com/soomla/unity3d-store"-->
-               <!--onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'project_view_unity', 'Someone wants to view our project !']);">View-->
-            <!--On <strong>GitHub</strong></a></li>-->
-    <!--</ul>-->
+    <ul class="actions">
+        <li><a href="https://github.com/soomla/unity3d-store/zipball/master"
+               onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'code_download_unity', 'Someone wants our ZIP !']);">Download
+            <strong>ZIP File</strong></a></li>
+        <li><a href="https://github.com/soomla/unity3d-store/tarball/master"
+               onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'code_download_unity', 'Someone wants our TAR !']);">Download
+            <strong>TAR Ball</strong></a></li>
+        <li><a href="https://github.com/soomla/unity3d-store"
+               onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'project_view_unity', 'Someone wants to view our project !']);">View
+            On <strong>GitHub</strong></a></li>
+    </ul>
 </header>
 
 <section>
@@ -382,6 +379,81 @@
         </div>
     </li>
 </ul>
+</div>
+
+
+<div style="margin-bottom: 50px;">
+    <a name="unity_anchor"></a>
+
+    <div style="margin-bottom: 10px;">
+        <h1 style="display: inline;">unity3d-store</h1>
+        <iframe src="http://ghbtns.com/github-btn.html?user=soomla&repo=unity3d-store&type=watch&count=true"
+                allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="20px"
+                style="float: right; margin-top: 5px;"></iframe>
+        <iframe src="http://ghbtns.com/github-btn.html?user=soomla&repo=unity3d-store&type=fork&count=true"
+                allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"
+                style="float: right; margin-top: 5px;"></iframe>
+    </div>
+    <p>Haven't you ever wanted an in-app purchase one liner that looks like this ?!</p>
+    <div class="highlight"><pre>    <span class="n">StoreController</span><span class="p">.</span><span class="n">BuyCurrencyPack</span><span class="p">(</span><span class="s">"[Product id here]"</span><span class="p">);</span>
+</pre></div>
+
+    <p>The unity3d-store is the Unity3D flavour of The SOOMLA Project. This project uses <a href="https://github.com/soomla/android-store">android-store</a> and <a href="https://github.com/soomla/ios-store">ios-store</a> in order to provide game developers with in-app billing for their <strong>Unity3D</strong> projects.</p>
+
+    <h2>
+        <a name="download" class="anchor" href="#download"><span class="mini-icon mini-icon-link"></span></a>Download</h2>
+
+    <p>We've created 2 unitypackages and one example project:</p>
+
+    <h4>
+        <a name="unity3d-store-v01-debug--release" class="anchor" href="#unity3d-store-v01-debug--release"><span class="mini-icon mini-icon-link"></span></a>unity3d-store v0.1 debug &amp; release</h4>
+
+    <ul>
+        <li>The <strong>debug</strong> version can be used for debugging (well... duh!). It'll print out various log messages that can help you understand how to fix things. If you want to ask a question, we'll need you to run with this unitypackage and show us the log.<br>
+        </li>
+        <li>On Android, there's another difference between <strong>debug</strong> and <strong>release</strong> versions. The difference is that when you run the <strong>debug</strong> you'll be able to test actual purchases (without even providing a valid public key) while with the <strong>release</strong> version you'll actually have to provide a valid public key and upload the app binary to the dev console and do all the rest of Google's requirements.</li>
+    </ul>
+
+    <p><a href="http://bit.ly/10Be6tF">unity3d-store v0.1 debug</a><br><a href="http://bit.ly/12QW3iz">unity3d-store v0.1 release</a></p>
+
+    <h4>
+        <a name="unity3d-store-v01-example" class="anchor" href="#unity3d-store-v01-example"><span class="mini-icon mini-icon-link"></span></a>unity3d-store v0.1 example</h4>
+
+    <ul>
+        <li>The example project is mostly what you have in this Github repo. You can either download it or clone unity3d-store.</li>
+    </ul>
+
+    <p><a href="http://bit.ly/TzHQl1">unity3d-store v0.1 example</a></p>
+
+    <h2>Example Usages</h2>
+
+    <ul>
+        <li>
+            <p>Get VirtualCurrency with itemId "currency_coin":</p>
+
+            <div class="highlight"><pre><span class="n">VirtualCurrency</span> <span class="n">coin</span> <span class="p">=</span> <span class="n">StoreInfo</span><span class="p">.</span><span class="n">GetVirtualCurrencyByItemId</span><span class="p">(</span><span class="s">"currency_coin"</span><span class="p">);</span>
+</pre></div>
+        </li>
+        <li>
+            <p>Add 10 coins to the virtual currency with itemId "currency_coin":</p>
+
+            <div class="highlight"><pre><span class="n">StoreInventory</span><span class="p">.</span><span class="n">AddCurrencyAmount</span><span class="p">(</span><span class="s">"currency_coin"</span><span class="p">,</span> <span class="m">10</span><span class="p">);</span>
+</pre></div>
+        </li>
+        <li>
+            <p>Remove 10 virtual goods with itemId "green_hat":</p>
+
+            <div class="highlight"><pre><span class="n">StoreInventory</span><span class="p">.</span><span class="n">RemoveGoodAmount</span><span class="p">(</span><span class="s">"green_hat"</span><span class="p">,</span> <span class="m">10</span><span class="p">);</span>
+</pre></div>
+        </li>
+        <li>
+            <p>Get the current balance of green hats (virtual goods with itemId "green_hat"):</p>
+
+            <div class="highlight"><pre><span class="kt">int</span> <span class="n">greenHatsBalance</span> <span class="p">=</span> <span class="n">StoreInventory</span><span class="p">.</span><span class="n">GetGoodBalance</span><span class="p">(</span><span class="s">"green_hat"</span><span class="p">);</span>
+</pre></div>
+        </li>
+    </ul>
+
 </div>
 
 <div style="margin-bottom: 50px;">
