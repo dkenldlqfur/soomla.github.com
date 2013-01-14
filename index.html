@@ -199,7 +199,7 @@
 <p>Didn't you ever wanted an in-app purchase one liner that looks like this:</p>
 
 <div class="highlight"><pre>    <span class="p">[[</span><span class="n">StoreController</span> <span class="n">getInstance</span><span
-        class="p">]</span> <span class="nl">buyCurrencyPackWithProcuctId:</span><span class="s">@"[Your product id here]"</span><span
+        class="p">]</span> <span class="nl">buyAppStoreItemWithProcuctId:</span><span class="s">@"[Your product id here]"</span><span
         class="p">]</span>
                                     </pre>
 </div>
@@ -301,7 +301,7 @@
 
 <p>Didn't you ever wanted an in-app purchase one liner that looks like this:</p>
 
-<div class="highlight"><pre><span class="n">StoreController</span><span class="o">.</span><span class="na">buyCurrencyPack</span><span
+<div class="highlight"><pre><span class="n">StoreController</span><span class="o">.</span><span class="na">buyGoogleMarketItem</span><span
         class="o">(</span><span class="n">TEN_COINS_PACK</span><span class="o">.</span><span
         class="na">getProductId</span><span class="o">());</span>
     </pre>
@@ -406,7 +406,7 @@
     <p>We've created 2 unitypackages and one example project:</p>
 
     <h4>
-        <a name="unity3d-store-v01-debug--release" class="anchor" href="#unity3d-store-v01-debug--release"><span class="mini-icon mini-icon-link"></span></a>unity3d-store v0.1 debug &amp; release</h4>
+        <a name="unity3d-store-v01-debug--release" class="anchor" href="#unity3d-store-v01-debug--release"><span class="mini-icon mini-icon-link"></span></a>unity3d-store v0.2 debug &amp; release</h4>
 
     <ul>
         <li>The <strong>debug</strong> version can be used for debugging (well... duh!). It'll print out various log messages that can help you understand how to fix things. If you want to ask a question, we'll need you to run with this unitypackage and show us the log.<br>
@@ -414,16 +414,16 @@
         <li>On Android, there's another difference between <strong>debug</strong> and <strong>release</strong> versions. The difference is that when you run the <strong>debug</strong> you'll be able to test actual purchases (without even providing a valid public key) while with the <strong>release</strong> version you'll actually have to provide a valid public key and upload the app binary to the dev console and do all the rest of Google's requirements.</li>
     </ul>
 
-    <p><a href="http://bit.ly/10Be6tF">unity3d-store v0.1 debug</a><br><a href="http://bit.ly/12QW3iz">unity3d-store v0.1 release</a></p>
+    <p><a href="http://bit.ly/SA1znS">unity3d-store v0.2 debug</a><br><a href="http://bit.ly/103bzZ4">unity3d-store v0.2 release</a></p>
 
     <h4>
-        <a name="unity3d-store-v01-example" class="anchor" href="#unity3d-store-v01-example"><span class="mini-icon mini-icon-link"></span></a>unity3d-store v0.1 example</h4>
+        <a name="unity3d-store-v01-example" class="anchor" href="#unity3d-store-v01-example"><span class="mini-icon mini-icon-link"></span></a>unity3d-store v0.2 example</h4>
 
     <ul>
         <li>The example project is mostly what you have in this Github repo. You can either download it or clone unity3d-store.</li>
     </ul>
 
-    <p><a href="http://bit.ly/TzHQl1">unity3d-store v0.1 example</a></p>
+    <p><a href="http://bit.ly/WH1eew">unity3d-store v0.2 example</a></p>
 
     <h2>Example Usages</h2>
 
@@ -471,7 +471,7 @@
 
 <p>Didn't you ever wanted an in-app purchase one liner that looks like this:</p>
 
-<div class="highlight"><pre>    <span class="n">cocos2dx_StoreController</span><span class="o">::</span><span class="n">buyCurrencyPack</span><span
+<div class="highlight"><pre>    <span class="n">cocos2dx_StoreController</span><span class="o">::</span><span class="n">buyMarketItem</span><span
         class="p">(</span><span class="s">"[Your product id here]"</span><span class="p">);</span>
     </pre>
 </div>
