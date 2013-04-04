@@ -30,7 +30,7 @@
 
     <script type="text/javascript">
         var _kmq = _kmq || [];
-        var _kmk = _kmk || '38eaf6fd7eeed5498f6b57fab5f74a6ef3b3b153';
+        var _kmk = _kmk || '62be81e2371bb853ef12d78bfb99b7cbe3df3b41';
         function _kms(u){
             setTimeout(function(){
                 var d = document, f = d.getElementsByTagName('script')[0],
@@ -433,9 +433,10 @@
         <li>On Android, there's another difference between <strong>debug</strong> and <strong>release</strong> versions. The difference is that when you run the <strong>debug</strong> you'll be able to test actual purchases (without even providing a valid public key) while with the <strong>release</strong> version you'll actually have to provide a valid public key and upload the app binary to the dev console and do all the rest of Google's requirements.</li>
     </ul>
 
-    <p><a href="http://goo.gl/WolpW">Unity 4.0 - unity3d-store v0.23 debug</a><br><a href="http://goo.gl/eRTIo">Unity 4.0 - unity3d-store v0.23 release</a></p>
-    <p><a href="http://goo.gl/vhsQ6">Unity 3.5 - unity3d-store v0.23 debug</a><br><a href="http://goo.gl/PYnpI">Unity 3.5 - unity3d-store v0.23 release</a></p>
-
+    <p><a href="http://goo.gl/WolpW" onclick="sendGAEvent('code_download_unity4_debug', 'Someone wants to download unity4 debug !'); sendKISSEvent('code_download_unity', { version: 4, kind: 'debug' }); return false;" target="_blank">Unity 4.0 - unity3d-store v0.23 debug</a><br>
+       <a href="http://goo.gl/eRTIo" onclick="sendGAEvent('code_download_unity4_release', 'Someone wants to download unity4 release !'); sendKISSEvent('code_download_unity', { version: 4, kind: 'release' }); return false;" target="_blank">Unity 4.0 - unity3d-store v0.23 release</a></p>
+    <p><a href="http://goo.gl/vhsQ6" onclick="sendGAEvent('code_download_unity35_debug', 'Someone wants to download unity3.5 debug !'); sendKISSEvent('code_download_unity', { version: 3.5, kind: 'debug' }); return false;">Unity 3.5 - unity3d-store v0.23 debug</a><br>
+       <a href="http://goo.gl/PYnpI" onclick="sendGAEvent('code_download_unity35_release', 'Someone wants to download unity3.5 release !'); sendKISSEvent('code_download_unity', { version: 3.5, kind: 'release' }); return false;">Unity 3.5 - unity3d-store v0.23 release</a></p>
     <h4>
         <a name="unity3d-store-v01-example" class="anchor" href="#unity3d-store-v01-example"><span class="mini-icon mini-icon-link"></span></a>unity3d-store v0.23 example</h4>
 
@@ -443,8 +444,8 @@
         <li>The example project is mostly what you have in this Github repo. You can either download it or clone unity3d-store.</li>
     </ul>
 
-    <p><a href="http://goo.gl/RNPdu">Unity 4.0 - unity3d-store v0.23 example</a></p>
-    <p><a href="http://goo.gl/5NT4a">Unity 3.5 - unity3d-store v0.23 example</a></p>
+    <p><a href="http://goo.gl/RNPdu" onclick="sendGAEvent('code_download_unity4_example', 'Someone wants to download unity4 example !'); sendKISSEvent('code_download_unity', { version: 4, kind: 'example' }); return false;">Unity 4.0 - unity3d-store v0.23 example</a></p>
+    <p><a href="http://goo.gl/5NT4a" onclick="sendGAEvent('code_download_unity35_example', 'Someone wants to download unity3.5 example !'); sendKISSEvent('code_download_unity', { version: 3.5, kind: 'example' }); return false;">Unity 3.5 - unity3d-store v0.23 example</a></p>
 
     <h2>Example Usages</h2>
 
