@@ -28,6 +28,21 @@
 
     </script>
 
+    <script type="text/javascript">
+        var _kmq = _kmq || [];
+        var _kmk = _kmk || '38eaf6fd7eeed5498f6b57fab5f74a6ef3b3b153';
+        function _kms(u){
+            setTimeout(function(){
+                var d = document, f = d.getElementsByTagName('script')[0],
+                        s = d.createElement('script');
+                s.type = 'text/javascript'; s.async = true; s.src = u;
+                f.parentNode.insertBefore(s, f);
+            }, 1);
+        }
+        _kms('//i.kissmetrics.com/i.js');
+        _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+    </script>
+
 
     <script type="text/javascript">
         $(function () {
@@ -51,6 +66,14 @@
                 }
             });
         });
+
+        function sendGAEvent(eventName, desc) {
+            _gaq.push(['_trackEvent', 'immediate_goals', eventName, desc]);
+        }
+
+        function sendKISSEvent(eventName, params) {
+            _kmq.push(['record', eventName, params]);
+        }
     </script>
 </head>
 <body>
@@ -101,13 +124,13 @@
     <strong>In-App Billing with a single line of code</strong>
     <ul class="actions">
         <li><a href="https://github.com/soomla/android-store/zipball/master"
-               onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'code_download_android', 'Someone wants our ZIP !']);" target="_blank">Download
+               onclick="sendGAEvent('code_download_android', 'Someone wants our ZIP !'); sendKISSEvent('code_download_android', { kind: 'zip' }); return false;" target="_blank">Download
             <strong>ZIP File</strong></a></li>
         <li><a href="https://github.com/soomla/android-store/tarball/master"
-               onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'code_download_android', 'Someone wants our TAR !']);" target="_blank">Download
+               onclick="sendGAEvent('code_download_android', 'Someone wants our TAR !'); sendKISSEvent('code_download_android', { kind: 'tar' }); return false;" target="_blank">Download
             <strong>TAR Ball</strong></a></li>
         <li><a href="https://github.com/soomla/android-store"
-               onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'project_view_android', 'Someone wants to view our project !']);" target="_blank">View
+               onclick="sendGAEvent('project_view_android', 'Someone wants to view our project !'); sendKISSEvent('project_view_android', { }); return false;" target="_blank">View
             On <strong>GitHub</strong></a></li>
     </ul>
 
@@ -115,27 +138,21 @@
     <strong>In-App Purchase with a single line of code</strong>
     <ul class="actions">
         <li><a href="https://github.com/soomla/ios-store/zipball/master"
-               onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'code_download_ios', 'Someone wants our ZIP !']);" target="_blank">Download
+               onclick="sendGAEvent('code_download_ios', 'Someone wants our ZIP !'); sendKISSEvent('code_download_ios', { kind: 'zip' }); return false;" target="_blank">Download
             <strong>ZIP File</strong></a></li>
         <li><a href="https://github.com/soomla/ios-store/tarball/master"
-               onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'code_download_ios', 'Someone wants our TAR !']);" target="_blank">Download
+               onclick="sendGAEvent('code_download_ios', 'Someone wants our TAR !'); sendKISSEvent('code_download_ios', { kind: 'tar' }); return false;" target="_blank">Download
             <strong>TAR Ball</strong></a></li>
         <li><a href="https://github.com/soomla/ios-store"
-               onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'project_view_ios', 'Someone wants to view our project !']);" target="_blank">View
+               onclick="sendGAEvent('project_view_ios', 'Someone wants to view our project !'); sendKISSEvent('project_view_ios', { }); return false;" target="_blank">View
             On <strong>GitHub</strong></a></li>
     </ul>
 
     <h2><img src="img/cocos.png" style="margin-top:12px" height="40px"/> COCOS2d-X</h2>
     <strong>Extension for the popluar 2D framework</strong>
     <ul class="actions">
-        <!--<li><a href="https://github.com/soomla/cocos2dx-store/zipball/master"-->
-               <!--onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'code_download_cocos', 'Someone wants our ZIP !']);">Download-->
-            <!--<strong>ZIP File</strong></a></li>-->
-        <!--<li><a href="https://github.com/soomla/cocos2dx-store/tarball/master"-->
-               <!--onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'code_download_cocos', 'Someone wants our TAR !']);">Download-->
-            <!--<strong>TAR Ball</strong></a></li>-->
-        <li style="width: inherit;"><a href="https://github.com/soomla/cocos2dx-store"
-               onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'project_view_cocos', 'Someone wants to view our project !']);" target="_blank">View
+        <li style="width: inherit;"><a href="https://github.com/soomla/ios-store"
+               onclick="sendGAEvent('project_view_cocos', 'Someone wants to view our project !'); sendKISSEvent('project_view_cocos', { }); return false;" target="_blank">View
             On <strong>GitHub</strong></a></li>
     </ul>
 
@@ -143,21 +160,23 @@
     </h2>
     <strong>Plugin for the leading 3D game engine</strong>
     <ul class="actions">
-        <li><a href="https://github.com/soomla/unity3d-store/zipball/master"
-               onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'code_download_unity', 'Someone wants our ZIP !']);" target="_blank">Download
+        <li><a href="https://github.com/soomla/unity-store/zipball/master"
+               onclick="sendGAEvent('code_download_unity', 'Someone wants our ZIP !'); sendKISSEvent('code_download_unity', { kind: 'zip' }); return false;" target="_blank">Download
             <strong>ZIP File</strong></a></li>
-        <li><a href="https://github.com/soomla/unity3d-store/tarball/master"
-               onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'code_download_unity', 'Someone wants our TAR !']);" target="_blank">Download
+        <li><a href="https://github.com/soomla/unity-store/tarball/master"
+               onclick="sendGAEvent('code_download_unity', 'Someone wants our TAR !'); sendKISSEvent('code_download_unity', { kind: 'tar' }); return false;" target="_blank">Download
             <strong>TAR Ball</strong></a></li>
-        <li><a href="https://github.com/soomla/unity3d-store"
-               onclick="_gaq.push(['_trackEvent', 'immediate_goals', 'project_view_unity', 'Someone wants to view our project !']);" target="_blank">View
+        <li><a href="https://github.com/soomla/unity-store"
+               onclick="sendGAEvent('project_view_unity', 'Someone wants to view our project !'); sendKISSEvent('project_view_unity', { }); return false;" target="_blank">View
             On <strong>GitHub</strong></a></li>
     </ul>
 </header>
 
 <section>
 
-<a href="https://github.com/soomla/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1000;"
+<a href="https://github.com/soomla/"
+   onclick="sendGAEvent('soomla_fork', 'Someone wants to fork our project !'); sendKISSEvent('soomla_fork', { }); return false;" target="_blank">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1000;"
                                           src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
                                           alt="Fork me on GitHub"></a>
 
