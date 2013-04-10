@@ -55,6 +55,36 @@ mixpanel.init("0b4c2a4eb16ccf021b70ef2d27e8ecb8");</script><!-- end Mixpanel -->
                     $('.facebook').css("transform", "translate(0px, 0px)");
                 }
             });
+
+            $(".mix-fmwk-user").click(function() {
+                mixpanel.people.set({
+                    framework_user: 'yes'
+                });
+            });
+
+            $(".mix-unity-user").click(function() {
+                mixpanel.people.set({
+                    project_unity_user: 'yes'
+                });
+            });
+
+            $(".mix-ios-user").click(function() {
+                mixpanel.people.set({
+                    project_ios_user: 'yes'
+                });
+            });
+
+            $(".mix-android-user").click(function() {
+                mixpanel.people.set({
+                    project_android_user: 'yes'
+                });
+            });
+
+            $(".mix-cocos-user").click(function() {
+                mixpanel.people.set({
+                    project_cocos_user: 'yes'
+                });
+            });
         });
 
         function sendGAEvent(eventName, desc) {
@@ -87,7 +117,9 @@ mixpanel.init("0b4c2a4eb16ccf021b70ef2d27e8ecb8");</script><!-- end Mixpanel -->
 
 <div id="promo-container">
     <div id="promo">
-        Try our new Store Designer! <a href="http://designer.soom.la" class="promo-btn" style="color: #333;">Click Here</a>
+        Try our new Store Designer! <a href="http://designer.soom.la"
+                                       onclick="sendMixEvent('designer_top_link', {  });" target="_blank"
+                                       class="promo-btn" style="color: #333;">Click Here</a>
     </div>
 </div>
 
@@ -117,13 +149,13 @@ mixpanel.init("0b4c2a4eb16ccf021b70ef2d27e8ecb8");</script><!-- end Mixpanel -->
     <h2><img src="img/black_android_logo.png" style="margin-top:12px" height="40px"/> ANDROID</h2>
     <strong>In-App Billing with a single line of code</strong>
     <ul class="actions">
-        <li><a href="https://github.com/soomla/android-store/zipball/master"
+        <li><a class="mix-fmwk-user mix-android-user" href="https://github.com/soomla/android-store/zipball/master"
                onclick="sendGAEvent('code_download_android', 'Someone wants our ZIP !'); sendMixEvent('code_download_android', { kind: 'zip' }); " target="_blank">Download
             <strong>ZIP File</strong></a></li>
-        <li><a href="https://github.com/soomla/android-store/tarball/master"
+        <li><a class="mix-fmwk-user mix-android-user" href="https://github.com/soomla/android-store/tarball/master"
                onclick="sendGAEvent('code_download_android', 'Someone wants our TAR !'); sendMixEvent('code_download_android', { kind: 'tar' }); " target="_blank">Download
             <strong>TAR Ball</strong></a></li>
-        <li><a href="https://github.com/soomla/android-store"
+        <li><a class="mix-fmwk-user mix-android-user" href="https://github.com/soomla/android-store"
                onclick="sendGAEvent('project_view_android', 'Someone wants to view our project !'); sendMixEvent('project_view_android', { }); " target="_blank">View
             On <strong>GitHub</strong></a></li>
     </ul>
@@ -131,13 +163,13 @@ mixpanel.init("0b4c2a4eb16ccf021b70ef2d27e8ecb8");</script><!-- end Mixpanel -->
     <h2><img src="img/apple-logo.png" style="margin-top:12px" height="40px"/> iOS</h2>
     <strong>In-App Purchase with a single line of code</strong>
     <ul class="actions">
-        <li><a href="https://github.com/soomla/ios-store/zipball/master"
+        <li><a class="mix-fmwk-user mix-ios-user" href="https://github.com/soomla/ios-store/zipball/master"
                onclick="sendGAEvent('code_download_ios', 'Someone wants our ZIP !'); sendMixEvent('code_download_ios', { kind: 'zip' }); " target="_blank">Download
             <strong>ZIP File</strong></a></li>
-        <li><a href="https://github.com/soomla/ios-store/tarball/master"
+        <li><a class="mix-fmwk-user mix-ios-user" href="https://github.com/soomla/ios-store/tarball/master"
                onclick="sendGAEvent('code_download_ios', 'Someone wants our TAR !'); sendMixEvent('code_download_ios', { kind: 'tar' }); " target="_blank">Download
             <strong>TAR Ball</strong></a></li>
-        <li><a href="https://github.com/soomla/ios-store"
+        <li><a class="mix-fmwk-user mix-ios-user" href="https://github.com/soomla/ios-store"
                onclick="sendGAEvent('project_view_ios', 'Someone wants to view our project !'); sendMixEvent('project_view_ios', { }); " target="_blank">View
             On <strong>GitHub</strong></a></li>
     </ul>
@@ -145,7 +177,7 @@ mixpanel.init("0b4c2a4eb16ccf021b70ef2d27e8ecb8");</script><!-- end Mixpanel -->
     <h2><img src="img/cocos.png" style="margin-top:12px" height="40px"/> COCOS2d-X</h2>
     <strong>Extension for the popluar 2D framework</strong>
     <ul class="actions">
-        <li style="width: inherit;"><a href="https://github.com/soomla/ios-store"
+        <li style="width: inherit;"><a class="mix-fmwk-user mix-cocos-user" href="https://github.com/soomla/ios-store"
                onclick="sendGAEvent('project_view_cocos', 'Someone wants to view our project !'); sendMixEvent('project_view_cocos', { }); " target="_blank">View
             On <strong>GitHub</strong></a></li>
     </ul>
@@ -154,13 +186,13 @@ mixpanel.init("0b4c2a4eb16ccf021b70ef2d27e8ecb8");</script><!-- end Mixpanel -->
     </h2>
     <strong>Plugin for the leading 3D game engine</strong>
     <ul class="actions">
-        <li><a href="https://github.com/soomla/unity3d-store/zipball/master"
+        <li><a class="mix-fmwk-user mix-unity-user" href="https://github.com/soomla/unity3d-store/zipball/master"
                onclick="sendGAEvent('code_download_unity', 'Someone wants our ZIP !'); sendMixEvent('code_download_unity', { kind: 'zip' }); " target="_blank">Download
             <strong>ZIP File</strong></a></li>
-        <li><a href="https://github.com/soomla/unity3d-store/tarball/master"
+        <li><a class="mix-fmwk-user mix-unity-user" href="https://github.com/soomla/unity3d-store/tarball/master"
                onclick="sendGAEvent('code_download_unity', 'Someone wants our TAR !'); sendMixEvent('code_download_unity', { kind: 'tar' }); " target="_blank">Download
             <strong>TAR Ball</strong></a></li>
-        <li><a href="https://github.com/soomla/unity3d-store"
+        <li><a class="mix-fmwk-user mix-unity-user" href="https://github.com/soomla/unity3d-store"
                onclick="sendGAEvent('project_view_unity', 'Someone wants to view our project !'); sendMixEvent('project_view_unity', { }); " target="_blank">View
             On <strong>GitHub</strong></a></li>
     </ul>
@@ -168,7 +200,7 @@ mixpanel.init("0b4c2a4eb16ccf021b70ef2d27e8ecb8");</script><!-- end Mixpanel -->
 
 <section>
 
-<a href="https://github.com/soomla/"
+<a class="mix-fmwk-user" href="https://github.com/soomla/"
    onclick="sendGAEvent('soomla_fork', 'Someone wants to fork our project !'); sendMixEvent('soomla_fork', { }); " target="_blank">
     <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1000;"
                                           src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
@@ -414,7 +446,7 @@ mixpanel.init("0b4c2a4eb16ccf021b70ef2d27e8ecb8");</script><!-- end Mixpanel -->
     <p>The unity3d-store is the Unity3D flavour of The SOOMLA Project. This project uses <a href="https://github.com/soomla/android-store">android-store</a> and <a href="https://github.com/soomla/ios-store">ios-store</a> in order to provide game developers with in-app billing for their <strong>Unity3D</strong> projects.</p>
 
     <h2>
-        <a name="download" class="anchor" href="#download"><span class="mini-icon mini-icon-link"></span></a>Download</h2>
+        <a class="mix-fmwk-user mix-unity-user" name="download" class="anchor" href="#download"><span class="mini-icon mini-icon-link"></span></a>Download</h2>
 
     <p>We've created 2 unitypackages and one example project:</p>
 
@@ -427,19 +459,19 @@ mixpanel.init("0b4c2a4eb16ccf021b70ef2d27e8ecb8");</script><!-- end Mixpanel -->
         <li>On Android, there's another difference between <strong>debug</strong> and <strong>release</strong> versions. The difference is that when you run the <strong>debug</strong> you'll be able to test actual purchases (without even providing a valid public key) while with the <strong>release</strong> version you'll actually have to provide a valid public key and upload the app binary to the dev console and do all the rest of Google's requirements.</li>
     </ul>
 
-    <p><a href="http://goo.gl/WolpW" onclick="sendGAEvent('code_download_unity4_debug', 'Someone wants to download unity4 debug !'); sendMixEvent('code_download_unity', { version: 4, kind: 'debug' }); " target="_blank">Unity 4.0 - unity3d-store v0.23 debug</a><br>
-       <a href="http://goo.gl/eRTIo" onclick="sendGAEvent('code_download_unity4_release', 'Someone wants to download unity4 release !'); sendMixEvent('code_download_unity', { version: 4, kind: 'release' }); " target="_blank">Unity 4.0 - unity3d-store v0.23 release</a></p>
-    <p><a href="http://goo.gl/vhsQ6" onclick="sendGAEvent('code_download_unity35_debug', 'Someone wants to download unity3.5 debug !'); sendMixEvent('code_download_unity', { version: 3.5, kind: 'debug' }); ">Unity 3.5 - unity3d-store v0.23 debug</a><br>
-       <a href="http://goo.gl/PYnpI" onclick="sendGAEvent('code_download_unity35_release', 'Someone wants to download unity3.5 release !'); sendMixEvent('code_download_unity', { version: 3.5, kind: 'release' }); ">Unity 3.5 - unity3d-store v0.23 release</a></p>
+    <p><a class="mix-fmwk-user mix-unity-user" href="http://goo.gl/WolpW" onclick="sendGAEvent('code_download_unity4_debug', 'Someone wants to download unity4 debug !'); sendMixEvent('code_download_unity', { version: 4, kind: 'debug' }); " target="_blank">Unity 4.0 - unity3d-store v0.23 debug</a><br>
+       <a class="mix-fmwk-user mix-unity-user" href="http://goo.gl/eRTIo" onclick="sendGAEvent('code_download_unity4_release', 'Someone wants to download unity4 release !'); sendMixEvent('code_download_unity', { version: 4, kind: 'release' }); " target="_blank">Unity 4.0 - unity3d-store v0.23 release</a></p>
+    <p><a class="mix-fmwk-user mix-unity-user" href="http://goo.gl/vhsQ6" onclick="sendGAEvent('code_download_unity35_debug', 'Someone wants to download unity3.5 debug !'); sendMixEvent('code_download_unity', { version: 3.5, kind: 'debug' }); ">Unity 3.5 - unity3d-store v0.23 debug</a><br>
+       <a class="mix-fmwk-user mix-unity-user" href="http://goo.gl/PYnpI" onclick="sendGAEvent('code_download_unity35_release', 'Someone wants to download unity3.5 release !'); sendMixEvent('code_download_unity', { version: 3.5, kind: 'release' }); ">Unity 3.5 - unity3d-store v0.23 release</a></p>
     <h4>
-        <a name="unity3d-store-v01-example" class="anchor" href="#unity3d-store-v01-example"><span class="mini-icon mini-icon-link"></span></a>unity3d-store v0.23 example</h4>
+        <a class="mix-fmwk-user mix-unity-user" name="unity3d-store-v01-example" class="anchor" href="#unity3d-store-v01-example"><span class="mini-icon mini-icon-link"></span></a>unity3d-store v0.23 example</h4>
 
     <ul>
         <li>The example project is mostly what you have in this Github repo. You can either download it or clone unity3d-store.</li>
     </ul>
 
-    <p><a href="http://goo.gl/RNPdu" onclick="sendGAEvent('code_download_unity4_example', 'Someone wants to download unity4 example !'); sendMixEvent('code_download_unity', { version: 4, kind: 'example' }); ">Unity 4.0 - unity3d-store v0.23 example</a></p>
-    <p><a href="http://goo.gl/5NT4a" onclick="sendGAEvent('code_download_unity35_example', 'Someone wants to download unity3.5 example !'); sendMixEvent('code_download_unity', { version: 3.5, kind: 'example' }); ">Unity 3.5 - unity3d-store v0.23 example</a></p>
+    <p><a class="mix-fmwk-user mix-unity-user" href="http://goo.gl/RNPdu" onclick="sendGAEvent('code_download_unity4_example', 'Someone wants to download unity4 example !'); sendMixEvent('code_download_unity', { version: 4, kind: 'example' }); ">Unity 4.0 - unity3d-store v0.23 example</a></p>
+    <p><a class="mix-fmwk-user mix-unity-user" href="http://goo.gl/5NT4a" onclick="sendGAEvent('code_download_unity35_example', 'Someone wants to download unity3.5 example !'); sendMixEvent('code_download_unity', { version: 3.5, kind: 'example' }); ">Unity 3.5 - unity3d-store v0.23 example</a></p>
 
     <h2>Example Usages</h2>
 
@@ -492,8 +524,8 @@ mixpanel.init("0b4c2a4eb16ccf021b70ef2d27e8ecb8");</script><!-- end Mixpanel -->
     </pre>
 </div>
 
-<p>The cocod2dx-store shows you how to use The SOOMLA Project's <a href="https://github.com/soomla/android-store">android-store</a>
-    and <a href="https://github.com/soomla/ios-store">ios-store</a> in your <strong>cocos2d-x</strong> project.
+<p>The cocod2dx-store shows you how to use The SOOMLA Project's <a class="mix-fmwk-user" href="https://github.com/soomla/android-store">android-store</a>
+    and <a class="mix-fmwk-user" href="https://github.com/soomla/ios-store">ios-store</a> in your <strong>cocos2d-x</strong> project.
     In cocos2dx-store there are 3 relevant scenes: MainScene, StoreAScene and StoreBScene:
 <ul>
     <li>MainScene - the welcome scene from where you open the store</li>
