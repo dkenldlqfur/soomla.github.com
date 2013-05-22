@@ -117,9 +117,9 @@ mixpanel.init("0b4c2a4eb16ccf021b70ef2d27e8ecb8");</script><!-- end Mixpanel -->
 
 <div id="promo-container">
     <div id="promo">
-        Try our new Store Designer! <a href="http://designer.soom.la/#sign-up"
+        Full Virtual Economy Solution: Store-front themes, Analytics, Data in the Cloud!<a href="http://soom.la/"
                                        onclick="sendMixEvent('designer_top_link', {  });" target="_blank"
-                                       class="promo-btn" style="color: #333;">Click Here</a>
+                                       class="promo-btn" style="color: #333;">Learn More</a>
     </div>
 </div>
 
@@ -220,12 +220,25 @@ mixpanel.init("0b4c2a4eb16ccf021b70ef2d27e8ecb8");</script><!-- end Mixpanel -->
     <li>APIs for simplifying In-App Purchases to a single line of code including increased security and event
         handling.
     </li>
-    <li>Templates and themes for virtual economies and store-front based on pre-optimized and user intuitive layouts. Try the <a href="http://designer.soom.la">SOOMLA Store Designer</a>.
+    <li>Templates and themes for virtual economies and store-front based on pre-optimized and user intuitive layouts.  <a href="http://soom.la/wp2/#anchor-th">Learn More</a>.
     </li>
-    <li>Admin console for dynamically updating and optimizing virtual economy attributes and game economy mechanics.
+    <li>Admin console for analyzing and dynamically updating virtual economy attributes and store-front. <a href="http://soom.la/wp2/#anchor-hit">Learn More</a>.
     </li>
 </ul>
 </p>
+
+<p><h2>News features added in V3:</h2>
+<ul>
+    <li>Economy Model Objects <a href="Economy-Model-Objects/">Learn More</a></li>
+    <li>Handling Store Operations <a href="Handling-Store-Operations/">Learn More</a></li>
+    <li>Two ways to purchase: PurchaseWithMarket and PurchaseWithVirtualItem.</li>
+	<ul><li><strong>PurchaseWithMarket</strong> allows users to purchase a VirtualItem with the App Store.</li>
+	<li><strong>PurchaseWithVirtualItem</strong> lets your users purchase a VirtualItem with a different VirtualItem. For Example: Buying 1 Sword with 100 Gems.</li>
+	</ul>
+    
+</ul>
+</p>
+
 <hr style="height: 4px;">
 
 <div style="margin-bottom: 50px;">
@@ -243,90 +256,40 @@ mixpanel.init("0b4c2a4eb16ccf021b70ef2d27e8ecb8");</script><!-- end Mixpanel -->
 
 <p>Didn't you ever wanted an in-app purchase one liner that looks like this:</p>
 
-<div class="highlight"><pre>    <span class="p">[[</span><span class="n">StoreController</span> <span class="n">getInstance</span><span
-        class="p">]</span> <span class="nl">buyAppStoreItemWithProcuctId:</span><span class="s">@"[Your product id here]"</span><span
-        class="p">]</span>
-                                    </pre>
-</div>
+<div class="highlight"><pre>    <span class="p">[</span><span class="n">StoreInventory</span> <span class="n">buyItemWithItemId</span><span class="o">:</span><span class="s">@"[itemId]"</span><span class="p">]</span>
+</pre></div>
 
 <p>The ios-store is our ios-falvored code initiative part of The SOOMLA Project. It is an iOS SDK that simplifies the
     App Store's in-app purchasing API and complements it with storage, security and event handling. The project also
     includes a sample app for reference. </p>
+	
 
 <h2>Usage Examples</h2>
 
-<p>Lets say you have a VirtualCurrencyPack you call TEN_COINS_PACK, a VirtualCurrency you call COIN_CURRENCY and a
-    VirtualCategory you call CURRENCYPACKS_CATEGORY:</p>
 
-<div class="highlight">
-    <pre>
-        <span class="n">VirtualCurrencyPack</span><span class="o">*</span> <span class="n">TEN_COINS_PACK</span> <span
-        class="o">=</span> <span class="p">[[</span><span class="n">VirtualCurrencyPack</span> <span
-        class="n">alloc</span><span class="p">]</span> <span class="nl">initWithName:</span><span
-        class="s">@"10 Coins"</span>
-                                                                                  <span class="nl">andDescription:</span><span
-            class="s">@"A pack of 10 coins"</span>
-                                                                                  <span class="nl">andImgFilePath:</span><span
-            class="s">@"themes/awsomegame/img/coins/10_coins.png"</span>
-                                                                                       <span class="nl">andItemId:</span><span
-            class="s">@"10_coins"</span>
-                                                                                        <span class="nl">andPrice:</span><span
-            class="mf">0.99</span>
-                                                                                    <span class="nl">andProductId:</span><span
-            class="n">TEN_COINS_PACK_PRODUCT_ID</span>
-                                                                               <span class="nl">andCurrencyAmount:</span><span
-            class="mi">10</span>
-                                                                                     <span class="nl">andCurrency:</span><span
-            class="n">COIN_CURRENCY</span>
-                                                                                     <span class="nl">andCategory:</span><span
-            class="n">CURRENCYPACKS_CATEGORY</span><span
-            class="p">];</span>
-                                    </pre>
-</div>
-
+<p>
+Apart from calling the IAP api, the day to day interaction with SOOMLA will be to update balances of virtual goods. This is done through StoreInventory. Here are 3 basic examples:
+</p>
 <ul>
-    <li>
-        <p>Add 10 coins to the virtual currency with itemId "currency_coin":</p>
+<li>
+<p>Give the user 10 pieces of a virtual currency with itemId "currency_coin":</p>
 
-        <div class="highlight"><pre><span class="n">VirtualCurrency</span><span class="o">*</span> <span
-                class="n">coin</span> <span class="o">=</span> <span class="p">[[</span><span class="n">StoreInfo</span> <span
-                class="n">getInstance</span><span class="p">]</span> <span class="nl">currencyWithItemId:</span><span
-                class="s">@"currency_coin"</span><span class="p">];</span>
-                <span class="p">[[[</span><span class="n">StorageManager</span> <span class="n">getInstance</span><span
-                    class="p">]</span> <span class="n">virtualCurrencyStorage</span><span class="p">]</span> <span
-                    class="nl">addAmount:</span><span class="mi">10</span> <span class="nl">toCurrency:</span><span
-                    class="n">coin</span><span class="p">];</span>
-                </pre>
-        </div>
-    </li>
-    <li>
-        <p>Remove 10 virtual goods with itemId "green_hat":</p>
+<div class="highlight"><pre><span class="p">[</span><span class="n">StoreInventory</span> <span class="n">giveAmount</span><span class="o">:</span><span class="mi">10</span> <span class="n">ofItem</span><span class="o">:</span><span class="s">@"currency_coin"</span><span class="p">];</span>
+</pre></div>
+</li>
+<li>
+<p>Take 10 virtual goods with itemId "green_hat":</p>
 
-        <div class="highlight"><pre><span class="n">VirtualGood</span><span class="o">*</span> <span
-                class="n">greenHat</span> <span class="o">=</span> <span class="p">[[</span><span
-                class="n">StoreInfo</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">goodWithItemId:</span><span
-                class="s">@"green_hat"</span><span class="p">];</span>
-                <span class="p">[[[</span><span class="n">StorageManager</span> <span class="n">getInstance</span><span
-                    class="p">]</span> <span class="n">virtualGoodStorage</span><span class="p">]</span> <span
-                    class="nl">removeAmount:</span><span class="mi">10</span> <span class="nl">fromGood:</span><span
-                    class="n">greenHat</span><span class="p">];</span>
-                </pre>
-        </div>
-    </li>
-    <li>
-        <p>Get the current balance of green hats (virtual goods with itemId "green_hat"):</p>
+<div class="highlight"><pre><span class="p">[</span><span class="n">StoreInventory</span> <span class="n">takeAmount</span><span class="o">:</span><span class="mi">10</span> <span class="n">ofItem</span><span class="o">:</span><span class="s">@"currency_coin"</span><span class="p">];</span>
+</pre></div>
+</li>
+<li>
+<p>Get the current balance of a virtual good with itemId "green_hat" (here we decided to show you the 'long' way. you can also use StoreInventory):</p>
 
-        <div class="highlight"><pre><span class="n">VirtualGood</span><span class="o">*</span> <span
-                class="n">greenHat</span> <span class="o">=</span> <span class="p">[[</span><span
-                class="n">StoreInfo</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">goodWithItemId:</span><span
-                class="s">@"green_hat"</span><span class="p">];</span>
-                <span class="kt">int</span> <span class="n">greenHatsBalance</span> <span class="o">=</span> <span
-                    class="p">[[[</span><span class="n">StorageManager</span> <span class="n">getInstance</span><span
-                    class="p">]</span> <span class="n">virtualGoodStorage</span><span class="p">]</span> <span
-                    class="nl">getBalanceForGood:</span><span class="n">greenHat</span><span class="p">];</span>
-                </pre>
-        </div>
-    </li>
+<div class="highlight"><pre><span class="n">VirtualGood</span><span class="o">*</span> <span class="n">greenHat</span> <span class="o">=</span> <span class="p">(</span><span class="n">VirtualGood</span><span class="o">*</span><span class="p">)[[</span><span class="n">StoreInfo</span> <span class="n">getInstance</span><span class="p">]</span> <span class="n">virtualItemWithId</span><span class="o">:</span><span class="s">@"green_hat"</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">greenHatsBalance</span> <span class="o">=</span> <span class="p">[[[</span><span class="n">StorageManager</span> <span class="n">getInstance</span><span class="p">]</span> <span class="n">virtualGoodStorage</span><span class="p">]</span> <span class="n">balanceForItem</span><span class="o">:</span><span class="n">greenHat</span><span class="p">];</span>
+</pre></div>
+</li>
 </ul>
 </div>
 
@@ -346,11 +309,8 @@ mixpanel.init("0b4c2a4eb16ccf021b70ef2d27e8ecb8");</script><!-- end Mixpanel -->
 
 <p>Didn't you ever wanted an in-app purchase one liner that looks like this:</p>
 
-<div class="highlight"><pre><span class="n">StoreController</span><span class="o">.</span><span class="na">buyGoogleMarketItem</span><span
-        class="o">(</span><span class="n">TEN_COINS_PACK</span><span class="o">.</span><span
-        class="na">getProductId</span><span class="o">());</span>
-    </pre>
-</div>
+<div class="highlight"><pre>    <span class="n">StoreInventory</span><span class="o">.</span><span class="na">buy</span><span class="o">(</span><span class="s">"[itemId]"</span><span class="o">);</span>
+</pre></div>
 
 <p>The android-store is our first open code initiative as part of The SOOMLA Project. It is a Java API that simplifies
     Google Play's in-app purchasing API and complements it with storage, security and event handling. The project also
@@ -358,71 +318,29 @@ mixpanel.init("0b4c2a4eb16ccf021b70ef2d27e8ecb8");</script><!-- end Mixpanel -->
 
 <h2>Usage Example</h2>
 
-<p>Lets say you have a <em>VirtualCurrencyPack</em> you call <code>TEN_COINS_PACK</code>, a <em>VirtualCurrency</em> you
-    call <code>COIN_CURRENCY</code> and a <em>VirtualCategory</em> you call <code>CURRENCYPACKS_CATEGORY</code>:</p>
-
-<div class="highlight"><pre><span class="n">VirtualCurrencyPack</span> <span class="n">TEN_COINS_PACK</span> <span
-        class="o">=</span> <span class="k">new</span> <span class="n">VirtualCurrencyPack</span><span class="o">(</span>
-            <span class="s">"10 Coins"</span><span class="o">,</span>                <span class="c1">// name</span>
-            <span class="s">"A pack of 10 coins"</span><span class="o">,</span>      <span
-            class="c1">// description</span>
-            <span class="s">"themes/awsomegame/img/coins/10_coins.png"</span><span class="o">,</span> <span class="c1">// image file path</span>
-            <span class="s">"10_coins"</span><span class="o">,</span>                <span class="c1">// item id</span>
-            <span class="n">TEN_COINS_PACK_PRODUCT_ID</span><span class="o">,</span> <span class="c1">// product id in Google Market</span>
-            <span class="mf">1.99</span><span class="o">,</span>                      <span
-            class="c1">// actual price in $$</span>
-            <span class="mi">10</span><span class="o">,</span>                        <span class="c1">// number of currencies in the pack</span>
-            <span class="n">COIN_CURRENCY</span><span class="o">,</span>             <span class="c1">// the associated currency</span>
-            <span class="n">CURRENCYPACKS_CATEGORY</span><span class="o">);</span>   <span class="c1">// the associated category</span>
-    </pre>
-</div>
-
+<p>
+Apart from calling the IAP api, the day to day interaction with SOOMLA will be to update balances of virtual goods. This is done through StoreInventory. Here are 3 basic examples:
+</p>
 <ul>
-    <li>
-        <p>Add 10 coins to the virtual currency with itemId "currency_coin":</p>
+<li>
+<p>Give the user 10 pieces of a virtual currency with itemId "currency_coin":</p>
 
-        <div class="highlight"><pre><span class="n">VirtualCurrency</span> <span class="n">coin</span> <span
-                class="o">=</span> <span class="n">StoreInfo</span><span class="o">.</span><span
-                class="na">getInstance</span><span class="o">().</span><span
-                class="na">getVirtualCurrencyByItemId</span><span class="o">(</span><span
-                class="s">"currency_coin"</span><span class="o">);</span>
-    <span class="n">StorageManager</span><span class="o">.</span><span class="na">getInstance</span><span
-                    class="o">().</span><span class="na">getVirtualCurrencyStorage</span><span class="o">().</span><span
-                    class="na">add</span><span class="o">(</span><span class="n">coin</span><span
-                    class="o">,</span> <span class="mi">10</span><span class="o">);</span>
-    </pre>
-        </div>
-    </li>
-    <li>
-        <p>Remove 10 virtual goods with itemId "green_hat":</p>
+<div class="highlight"><pre><span class="n">StoreInventory</span><span class="o">.</span><span class="na">giveVirtualItem</span><span class="o">(</span><span class="s">"currency_coin"</span><span class="o">,</span> <span class="mi">10</span><span class="o">);</span>
+</pre></div>
+</li>
+<li>
+<p>Take 10 virtual goods with itemId "green_hat":</p>
 
-        <div class="highlight"><pre><span class="n">VirtualGood</span> <span class="n">greenHat</span> <span
-                class="o">=</span> <span class="n">StoreInfo</span><span class="o">.</span><span
-                class="na">getInstance</span><span class="o">().</span><span
-                class="na">getVirtualGoodByItemId</span><span class="o">(</span><span class="s">"green_hat"</span><span
-                class="o">);</span>
-    <span class="n">StorageManager</span><span class="o">.</span><span class="na">getInstance</span><span
-                    class="o">().</span><span class="na">getVirtualGoodsStorage</span><span class="o">().</span><span
-                    class="na">remove</span><span class="o">(</span><span class="n">greenHat</span><span
-                    class="o">,</span> <span class="mi">10</span><span class="o">);</span>
-    </pre>
-        </div>
-    </li>
-    <li>
-        <p>Get the current balance of green hats (virtual goods with itemId "green_hat"):</p>
+<div class="highlight"><pre><span class="n">StoreInventory</span><span class="o">.</span><span class="na">takeVirtualItem</span><span class="o">(</span><span class="s">"green_hat"</span><span class="o">,</span> <span class="mi">10</span><span class="o">);</span>
+</pre></div>
+</li>
+<li>
+<p>Get the current balance of a virtual good with itemId "green_hat" (here we decided to show you the 'long' way. you can also use StoreInventory):</p>
 
-        <div class="highlight"><pre><span class="n">VirtualGood</span> <span class="n">greenHat</span> <span
-                class="o">=</span> <span class="n">StoreInfo</span><span class="o">.</span><span
-                class="na">getInstance</span><span class="o">().</span><span
-                class="na">getVirtualGoodByItemId</span><span class="o">(</span><span class="s">"green_hat"</span><span
-                class="o">);</span>
-    <span class="kt">int</span> <span class="n">greenHatsBalance</span> <span class="o">=</span> <span class="n">StorageManager</span><span
-                    class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getVirtualGoodsStorage</span><span
-                    class="o">().</span><span class="na">getBalance</span><span class="o">(</span><span class="n">greenHat</span><span
-                    class="o">);</span>
-    </pre>
-        </div>
-    </li>
+<div class="highlight"><pre><span class="n">VirtualGood</span> <span class="n">greenHat</span> <span class="o">=</span> <span class="o">(</span><span class="n">VirtualGood</span><span class="o">)</span><span class="n">StoreInfo</span><span class="o">.</span><span class="na">getVirtualItem</span><span class="o">(</span><span class="s">"green_hat"</span><span class="o">);</span>
+<span class="kt">int</span> <span class="n">greenHatsBalance</span> <span class="o">=</span> <span class="n">StorageManager</span><span class="o">.</span><span class="na">getVirtualGoodsStorage</span><span class="o">().</span><span class="na">getBalance</span><span class="o">(</span><span class="n">greenHat</span><span class="o">);</span>
+</pre></div>
+</li>
 </ul>
 </div>
 
@@ -440,10 +358,10 @@ mixpanel.init("0b4c2a4eb16ccf021b70ef2d27e8ecb8");</script><!-- end Mixpanel -->
                 style="float: right; margin-top: 5px;"></iframe>
     </div>
     <p>Haven't you ever wanted an in-app purchase one liner that looks like this ?!</p>
-    <div class="highlight"><pre>    <span class="n">StoreController</span><span class="p">.</span><span class="n">BuyCurrencyPack</span><span class="p">(</span><span class="s">"[Product id here]"</span><span class="p">);</span>
+   <div class="highlight"><pre>    <span class="n">StoreInventory</span><span class="p">.</span><span class="n">BuyItem</span><span class="p">(</span><span class="s">"[itemId]"</span><span class="p">);</span>
 </pre></div>
 
-    <p>The unity3d-store is the Unity3D flavour of The SOOMLA Project. This project uses <a href="https://github.com/soomla/android-store">android-store</a> and <a href="https://github.com/soomla/ios-store">ios-store</a> in order to provide game developers with in-app billing for their <strong>Unity3D</strong> projects.</p>
+    <p>The unity3d-store is the Unity3D flavour of The SOOMLA Project. This project uses <a href="https://github.com/soomla/android-store">android-store</a> and <a href="https://github.com/soomla/ios-store">ios-store</a> in order to provide game developers with in-app billing for their <strong>Unity</strong> projects.</p>
 
     <h2>
         <a class="mix-fmwk-user mix-unity-user" name="download" class="anchor" href="#download"><span class="mini-icon mini-icon-link"></span></a>Download</h2>
@@ -474,33 +392,35 @@ mixpanel.init("0b4c2a4eb16ccf021b70ef2d27e8ecb8");</script><!-- end Mixpanel -->
     <p><a class="mix-fmwk-user mix-unity-user" href="http://goo.gl/5NT4a" onclick="sendGAEvent('code_download_unity35_example', 'Someone wants to download unity3.5 example !'); sendMixEvent('code_download_unity', { version: 3.5, kind: 'example' }); ">Unity 3.5 - unity3d-store v0.23 example</a></p>
 
     <h2>Example Usages</h2>
-
+<p>
+Apart from calling the IAP api, the day to day interaction with SOOMLA will be to update balances of virtual goods. This is done through StoreInventory. Here are 3 basic examples:
+</p>
     <ul>
-        <li>
-            <p>Get VirtualCurrency with itemId "currency_coin":</p>
+<li>
+<p>Get VirtualCurrency with itemId "currency_coin":</p>
 
-            <div class="highlight"><pre><span class="n">VirtualCurrency</span> <span class="n">coin</span> <span class="p">=</span> <span class="n">StoreInfo</span><span class="p">.</span><span class="n">GetVirtualCurrencyByItemId</span><span class="p">(</span><span class="s">"currency_coin"</span><span class="p">);</span>
+<div class="highlight"><pre><span class="n">VirtualCurrency</span> <span class="n">coin</span> <span class="p">=</span> <span class="n">StoreInfo</span><span class="p">.</span><span class="n">GetVirtualCurrencyByItemId</span><span class="p">(</span><span class="s">"currency_coin"</span><span class="p">);</span>
 </pre></div>
-        </li>
-        <li>
-            <p>Add 10 coins to the virtual currency with itemId "currency_coin":</p>
+</li>
+<li>
+<p>Give the user 10 pieces of a virtual currency with itemId "currency_coin":</p>
 
-            <div class="highlight"><pre><span class="n">StoreInventory</span><span class="p">.</span><span class="n">AddCurrencyAmount</span><span class="p">(</span><span class="s">"currency_coin"</span><span class="p">,</span> <span class="m">10</span><span class="p">);</span>
+<div class="highlight"><pre><span class="n">StoreInventory</span><span class="p">.</span><span class="n">GiveItem</span><span class="p">(</span><span class="s">"currency_coin"</span><span class="p">,</span> <span class="m">10</span><span class="p">);</span>
 </pre></div>
-        </li>
-        <li>
-            <p>Remove 10 virtual goods with itemId "green_hat":</p>
+</li>
+<li>
+<p>Take 10 virtual goods with itemId "green_hat":</p>
 
-            <div class="highlight"><pre><span class="n">StoreInventory</span><span class="p">.</span><span class="n">RemoveGoodAmount</span><span class="p">(</span><span class="s">"green_hat"</span><span class="p">,</span> <span class="m">10</span><span class="p">);</span>
+<div class="highlight"><pre><span class="n">StoreInventory</span><span class="p">.</span><span class="n">TakeItem</span><span class="p">(</span><span class="s">"green_hat"</span><span class="p">,</span> <span class="m">10</span><span class="p">);</span>
 </pre></div>
-        </li>
-        <li>
-            <p>Get the current balance of green hats (virtual goods with itemId "green_hat"):</p>
+</li>
+<li>
+<p>Get the current balance of green hats (virtual goods with itemId "green_hat"):</p>
 
-            <div class="highlight"><pre><span class="kt">int</span> <span class="n">greenHatsBalance</span> <span class="p">=</span> <span class="n">StoreInventory</span><span class="p">.</span><span class="n">GetGoodBalance</span><span class="p">(</span><span class="s">"green_hat"</span><span class="p">);</span>
+<div class="highlight"><pre><span class="kt">int</span> <span class="n">greenHatsBalance</span> <span class="p">=</span> <span class="n">StoreInventory</span><span class="p">.</span><span class="n">GetItemBalance</span><span class="p">(</span><span class="s">"green_hat"</span><span class="p">);</span>
 </pre></div>
-        </li>
-    </ul>
+</li>
+</ul>
 
 </div>
 
@@ -517,62 +437,26 @@ mixpanel.init("0b4c2a4eb16ccf021b70ef2d27e8ecb8");</script><!-- end Mixpanel -->
             style="float: right; margin-top: 5px;"></iframe>
 </div>
 
-<p>Didn't you ever wanted an in-app purchase one liner that looks like this:</p>
+<p>Haven't you ever wanted an in-app purchase one liner that looks like this:</p>
 
-<div class="highlight"><pre>    <span class="n">cocos2dx_StoreController</span><span class="o">::</span><span class="n">buyMarketItem</span><span
-        class="p">(</span><span class="s">"[Your product id here]"</span><span class="p">);</span>
-    </pre>
-</div>
+<div class="highlight"><pre>    <span class="n">cocos2dx_StoreController</span><span class="o">::</span><span class="n">buyMarketItem</span><span class="p">(</span><span class="s">"[itemId]"</span><span class="p">);</span>
+</pre></div>
+
 
 <p>The cocod2dx-store shows you how to use The SOOMLA Project's <a class="mix-fmwk-user" href="https://github.com/soomla/android-store">android-store</a>
     and <a class="mix-fmwk-user" href="https://github.com/soomla/ios-store">ios-store</a> in your <strong>cocos2d-x</strong> project.
     In cocos2dx-store there are 3 relevant scenes: MainScene, StoreAScene and StoreBScene:
 <ul>
     <li>MainScene - the welcome scene from where you open the store</li>
-    <li>StoreAScene - the store's first window that contains a list of VirtualGoods
-    <li>
+    <li>StoreAScene - the store's first window that contains a list of VirtualGoods</li>
     <li>StoreBScene - the store's second window that contains a list of VirtualCurrencyPacks</li>
 </ul>
 </p>
 
 <h2>Usage Examples</h2>
-
-<p>Lets say you have a VirtualCurrencyPack you call TEN_COINS_PACK, a VirtualCurrency you call COIN_CURRENCY and a
-    VirtualCategory you call CURRENCYPACKS_CATEGORY:</p>
-
-Android:
-<div class="highlight"><pre>
-            <span class="n">VirtualCurrencyPack</span> <span class="n">TEN_COINS_PACK</span> <span
-        class="o">=</span> <span
-        class="k">new</span> <span class="n">VirtualCurrencyPack</span><span class="o">(</span>
-            <span class="s">"10 Coins"</span><span class="o">,</span>                <span class="c1">// name</span>
-            <span class="s">"A pack of 10 coins"</span><span class="o">,</span>      <span
-        class="c1">// description</span>
-            <span class="s">"10_coins"</span><span class="o">,</span>                <span class="c1">// item id</span>
-            <span class="n">TEN_COINS_PACK_PRODUCT_ID</span><span class="o">,</span> <span class="c1">// product id in Google Market</span>
-            <span class="mf">1.99</span><span class="o">,</span>                      <span
-        class="c1">// actual price in $$</span>
-            <span class="mi">10</span><span class="o">,</span>                        <span class="c1">// number of currencies in the pack</span>
-            <span class="n">COIN_CURRENCY</span><span class="o">);</span>            <span class="c1">// the associated currency</span>
-</pre></div>
-
-iOS:
-<div class="highlight"><pre>
-            <span class="n">VirtualCurrencyPack</span><span class="o">*</span> <span
-        class="n">TEN_COINS_PACK</span> <span
-        class="o">=</span> <span class="p">[[</span><span class="n">VirtualCurrencyPack</span> <span
-        class="n">alloc</span><span class="p">]</span> <span class="nl">initWithName:</span><span
-        class="s">@"10 Coins"</span>
-                                                  <span class="nl">andDescription:</span><span class="s">@"A pack of 10 coins"</span>
-                                                       <span class="nl">andItemId:</span><span
-        class="s">@"10_coins"</span>
-                                                        <span class="nl">andPrice:</span><span class="mf">0.99</span>
-                                                    <span class="nl">andProductId:</span><span class="n">TEN_COINS_PACK_PRODUCT_ID</span>
-                                               <span class="nl">andCurrencyAmount:</span><span class="mi">10</span>
-                                                     <span class="nl">andCurrency:</span><span
-        class="n">COIN_CURRENCY</span><span class="p">];</span>
-    </pre>
-</div>
+<p>
+Apart from calling the IAP api, the day to day interaction with SOOMLA will be to update balances of virtual goods. This is done through StoreInventory. Here are 3 basic examples:
+</p>
 
 <ul>
     <li>
